@@ -78,7 +78,7 @@ h1, h2, h3, h4 {
   font-size: 3.5rem;
   font-weight: 800;
   background: linear-gradient(135deg, #3b82f6, #06b6d4);
-  -webkit-background-clip: text;
+  background-clip: text;
   -webkit-text-fill-color: transparent;
   margin-bottom: 0.5rem;
   letter-spacing: -1px;
@@ -203,7 +203,7 @@ h1, h2, h3, h4 {
 .top-bar h2 {
   font-size: 1.5rem;
   background: linear-gradient(135deg, #3b82f6, #06b6d4);
-  -webkit-background-clip: text;
+  background-clip: text;
   -webkit-text-fill-color: transparent;
 }
 
@@ -503,7 +503,7 @@ h1, h2, h3, h4 {
 
 /* Hand Area */
 .hand-area {
-  height: 300px;
+  height: 325px;
   padding: 0 2rem;
   display: flex;
   justify-content: center;
@@ -520,7 +520,7 @@ h1, h2, h3, h4 {
   height: 100%;
   overflow-x: auto;
   overflow-y: hidden;
-  padding-bottom: 1rem;
+  padding-bottom: 2.5rem;
   padding-top: 4rem;
   scroll-behavior: smooth;
   align-items: flex-end;
@@ -602,7 +602,7 @@ h1, h2, h3, h4 {
 .dialog-box h3 {
   font-size: 1.5rem;
   background: linear-gradient(135deg, #3b82f6, #06b6d4);
-  -webkit-background-clip: text;
+  background-clip: text;
   -webkit-text-fill-color: transparent;
 }
 
