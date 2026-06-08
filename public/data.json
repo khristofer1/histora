@@ -1,0 +1,47 @@
+[
+  {
+    "event_card": {
+      "id": "evt-01",
+      "question": "Kapan Organisasi Budi Utomo sebagai organisasi pemuda pertama perintis kemerdekaan dibentuk?",
+      "displayDate": "20 Mei 1908",
+      "sortDate": 19080520,
+      "title": "Organisasi Budi Utomo",
+      "description": "Dr. Sutomo bersama para mahasiswa STOVIA mendirikan organisasi pemuda yang bertujuan untuk mewujudkan kemerdekaan."
+    },
+    "character_card": {
+      "id": "chr-01",
+      "name": "Dr. Sutomo",
+      "description": "Pendiri organisasi Budi Utomo untuk memperjuangkan kemerdekaan Indonesia."
+    }
+  },
+  {
+    "event_card": {
+      "id": "evt-02",
+      "question": "Kapan Perang Cot Plieng sebagai perlawanan pertama kali invasi Jepang di Indonesia?",
+      "displayDate": "10 November 1942",
+      "sortDate": 19421110,
+      "title": "Perang Cot Plieng",
+      "description": "Aceh adalah wilayah pertama di Indonesia yang melakukan perlawanan terhadap Jepang. Perlawanan ini dipimpin oleh Tengku Abdul Jalil."
+    },
+    "character_card": {
+      "id": "chr-02",
+      "name": "Tengku Abdul Jalil",
+      "description": "Perang Cot Plieng di Aceh adalah peristiwa pertama perlawanan Indonesia terhadap invasi Jepang."
+    }
+  },
+  {
+    "event_card": {
+      "id": "evt-03",
+      "question": "Kapan pertempuran Laut Aru untuk merebut Irian Barat dari Belanda terjadi?",
+      "displayDate": "15 Januari 1962",
+      "sortDate": 19620115,
+      "title": "Pertempuran Laut Aru",
+      "description": "Operasi militer TNI untuk membebaskan Irian Barat dari Belanda. Komodor Yos Sudarso gugur di Laut Aru saat melawan Belanda."
+    },
+    "character_card": {
+      "id": "chr-03",
+      "name": "Laksamana Yos Sudarso",
+      "description": "Gugur saat pertempuran di Laut Aru dalam Pertempuran Laut Aru untuk pembebasan Irian Barat dari Belanda."
+    }
+  }
+]

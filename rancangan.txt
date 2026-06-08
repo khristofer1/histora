@@ -1,0 +1,82 @@
+1. Konsep permainan adalah urutan kronologi waktu.
+2. Boleh sih. Tapi, bagaimana pendapatmu kalau pakai TypeScript?
+Selain itu, saya berencana agar aplikasi ini tidak perlu membuat database bawaan, melainkan dapat diisi dengan file JSON dengan format berikut:
+[
+  {
+    "event_card": {
+      "id": "evt-01",
+      "question": "Kapan Organisasi Budi Utomo sebagai organisasi pemuda pertama perintis kemerdekaan dibentuk?",
+      "displayDate": "20 Mei 1908",
+      "sortDate": 19080520,
+      "title": "Organisasi Budi Utomo",
+      "description": "Dr. Sutomo bersama para mahasiswa STOVIA mendirikan organisasi pemuda yang bertujuan untuk mewujudkan kemerdekaan."
+    },
+    "character_card": {
+      "id": "chr-01",
+      "name": "Dr. Sutomo",
+      "description": "Pendiri organisasi Budi Utomo untuk memperjuangkan kemerdekaan Indonesia."
+    }
+  },
+  {
+    "event_card": {
+      "id": "evt-02",
+      "question": "Kapan Perang Cot Plieng sebagai perlawanan pertama kali invasi Jepang di Indonesia?",
+      "displayDate": "10 November 1942",
+      "sortDate": 19421110,
+      "title": "Perang Cot Plieng",
+      "description": "Aceh adalah wilayah pertama di Indonesia yang melakukan perlawanan terhadap Jepang. Perlawanan ini dipimpin oleh Tengku Abdul Jalil."
+    },
+    "character_card": {
+      "id": "chr-02",
+      "name": "Tengku Abdul Jalil",
+      "description": "Perang Cot Plieng di Aceh adalah peristiwa pertama perlawanan Indonesia terhadap invasi Jepang."
+    }
+  },
+  {
+    "event_card": {
+      "id": "evt-02",
+      "question": "Kapan pertempuran Laut Aru untuk merebut Irian Barat dari Belanda terjadi?",
+      "displayDate": "15 Januari 1962",
+      "sortDate": 19620115,
+      "title": "Pertempuran Laut Aru",
+      "description": "Operasi militer TNI untuk membebaskan Irian Barat dari Belanda. Komodor Yos Sudarso gugur di Laut Aru saat melawan Belanda."
+    },
+    "character_card": {
+      "id": "chr-02",
+      "name": "Laksamana Yos Sudarso",
+      "description": "Gugur saat pertempuran di Laut Aru dalam Pertempuran Laut Aru untuk pembebasan Irian Barat dari Belanda."
+    }
+  }
+]
+
+Kartu peristiwa punya sisi pertanyaan dan sisi jawaban.
+Sisi pertanyaan berisi:
+1. Tiga tanda tanya besar
+2. Properti "question"
+Sisi jawaban berisi:
+1. displayDate
+2. title
+3. description
+
+Kartu tokoh punya sisi depan dan belakang.
+Sisi depan berisi:
+1. Tulisan "Peristiwa terkait: " dan nama peristiwa yang terkait kartu tersebut
+2. name
+3. description
+Sisi belakang sama semua seperti kartu poker
+
+Persiapan permainan:
+1. Sistem mengacak kartu peristiwa, meletakkannya dalam posisi pertanyaan menghadap atas, lalu mengambil satu kartu teratas, lalu meletakannya dalam posisi jawaban menghadap atas di atas garis waktu. Kartu ini berfungsi sebagai patokan awal.
+2. Sistem mengacak kartu tokoh, meletakkannya dalam posisi poker menghadap atas, mengambil 5-8 kartu (tergantung pilihan pemain, semakin banyak semakin sulit), lalu memberikannya kepada pemain.
+
+Cara bermain:
+1. Pemain mengambil kartu peristiwa teratas, membaca pertanyaannya, lalu meletakkannya di garis waktu secara berurutan dengan kartu peristiwa lain di garis waktu. Sebelah kiri berarti sebelum, sebelah kanan berarti sesudah. Setelah pemain meletakkannya, sistem membuka kartu tersebut sehingga posisi jawaban menghadap atas.
+2. Jika urutan benar, pemain mendapatkan tiga pilihan aksi. Put character, refresh, dan pass.
+3. Put berarti pemain memilih salah satu kartu tokoh di tangannya yang berkaitan dengan salah satu kartu peristiwa di garis waktu, lalu meletakkannya di bawah kartu tersebut. Aksi ini tidak dapat dilakukan jika pemain tidak memiliki kartu tokoh yang terkait dengan salah satu peristiwa di garis waktu.
+4. Refresh berarti pemain membuang sejumlah kartu tokoh, kemudian mengambil kartu tokoh dengan jumlah yang sama dari dek tokoh. Dek buangan ini berisi kartu tokoh yang menghadap atas, sehingga bisa dilihat isinya. Jika kartu tokoh baru habis, sistem akan mengocok kartu dek buangan, lalu meletakkannya ke dek tokoh baru dalam posisi menghadap bawah untuk memperbarui dek tokoh.
+5. Pass berarti pemain tidak melakukan apa pun dan melanjutkan ke giliran berikutnya.
+6. Jika urutan salah, sistem meletakkan kartu di posisi yang benar, memberikan tanda silang merah pada kartu tersebut sebagai penanda agar pemain tahu dia salah dalam mengurutkan peristiwa yang mana, nyawa berkurang satu, dan pemain mengambil satu kartu tokoh dari dek tokoh. Pemain tidak dapat melakukan aksi put dan refresh dan lanjut ke giliran berikutnya.
+7. Ulangi langkah 1-6 sampai salah satu kondisi terpenuhi: kondisi menang atau kondisi kalah.
+8. Kondisi menang: semua kartu di tangan pemain habis.
+9. Kondisi kalah: nyawa pemain habis.
+10. Jika kartu peristiwa sudah habis namun pemain masih memiliki kartu di tangan, pemain langsung bisa melakukan aksi put atau refresh setiap giliran tanpa harus meletakkan kartu peristiwa (yang sudah tidak ada) lagi, lalu lanjut ke giliran berikutnya.
