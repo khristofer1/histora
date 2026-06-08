@@ -272,7 +272,7 @@ h1, h2, h3, h4 {
   flex: 1;
   display: flex;
   align-items: center;
-  padding: 6rem 2rem 9rem 2rem;
+  padding: 10.5rem 2rem 6rem 2rem;
   overflow-x: auto;
   scroll-behavior: smooth;
   gap: 0.5rem;
@@ -281,7 +281,7 @@ h1, h2, h3, h4 {
 
 .timeline-line {
   position: absolute;
-  top: 40%;
+  top: 57%;
   left: 0;
   right: 0;
   height: 4px;
@@ -475,7 +475,7 @@ h1, h2, h3, h4 {
 }
 
 .placed-char-container .character-card .desc {
-  font-size: 0.72rem;
+  font-size: 0.75rem;
   line-height: 1.3;
 }
 
