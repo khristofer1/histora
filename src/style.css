@@ -214,6 +214,51 @@ h1, h2, h3, h4 {
   filter: drop-shadow(0 0 6px rgba(239, 68, 68, 0.4));
 }
 
+/* Question Banner */
+.question-banner {
+  position: absolute;
+  top: 75px; /* right below top bar */
+  left: 50%;
+  transform: translateX(-50%);
+  width: 90%;
+  max-width: 600px;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 1rem 1.5rem;
+  border-radius: 12px;
+  border: 1px solid var(--accent-blue);
+  box-shadow: 0 4px 20px var(--accent-blue-glow);
+  z-index: 15;
+}
+
+.question-icon {
+  font-size: 2rem;
+  color: var(--accent-blue);
+  flex-shrink: 0;
+}
+
+.question-content {
+  display: flex;
+  flex-direction: column;
+  gap: 0.2rem;
+}
+
+.question-label {
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: var(--accent-cyan);
+}
+
+.question-text {
+  font-size: 0.95rem;
+  line-height: 1.4;
+  font-weight: 500;
+  color: var(--text-primary);
+}
+
 /* Timeline Layout */
 .timeline-container {
   flex: 1;
@@ -227,7 +272,7 @@ h1, h2, h3, h4 {
   flex: 1;
   display: flex;
   align-items: center;
-  padding: 2rem;
+  padding: 6rem 2rem 9rem 2rem;
   overflow-x: auto;
   scroll-behavior: smooth;
   gap: 0.5rem;
@@ -247,8 +292,8 @@ h1, h2, h3, h4 {
 
 /* Cards */
 .card {
-  width: 170px;
-  height: 250px;
+  width: 185px;
+  height: 270px;
   border-radius: 14px;
   position: relative;
   transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
@@ -340,22 +385,48 @@ h1, h2, h3, h4 {
 
 /* Placed Character under Timeline */
 .timeline-card-wrapper {
+  position: relative;
+  width: 185px;
+  height: 270px;
+  flex-shrink: 0;
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 1.5rem;
-  flex-shrink: 0;
-  margin-top: -30px;
 }
 
 .placed-char-container {
-  width: 170px;
-  height: 200px;
-  position: relative;
-  display: flex;
-  flex-direction: column;
-  gap: 0.5rem;
-  align-items: center;
+  position: absolute;
+  top: 100px; /* Leaves the top part (Date + Title) of the event card visible */
+  left: 6px;
+  right: 6px;
+  height: 195px; /* Size of character card inside */
+  z-index: 5;
+  transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+/* Hover over the event card: slide character card down to reveal description */
+.timeline-card-wrapper:hover .placed-char-container {
+  transform: translateY(125px); /* Slides down to reveal event details */
+  z-index: 12;
+}
+
+/* Placed character card inside the container */
+.placed-char-container .character-card {
+  width: 100%;
+  height: 100%;
+  padding: 0.8rem;
+  font-size: 0.8rem;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.6);
+  border: 1px solid var(--accent-cyan-glow);
+}
+
+.placed-char-container .character-card .name {
+  font-size: 0.95rem;
+}
+
+.placed-char-container .character-card .desc {
+  font-size: 0.7rem;
+  line-height: 1.3;
 }
 
 .placed-char-slot {
@@ -374,14 +445,15 @@ h1, h2, h3, h4 {
 
 .placed-char-slot.active-put-target {
   border-color: var(--accent-cyan);
-  background: rgba(6, 182, 212, 0.1);
+  background: rgba(6, 182, 212, 0.15);
   box-shadow: 0 0 15px var(--accent-cyan-glow);
   cursor: pointer;
+  color: var(--accent-cyan);
 }
 
 /* Hand Area */
 .hand-area {
-  height: 220px;
+  height: 240px;
   padding: 1rem 2rem;
   display: flex;
   justify-content: center;
@@ -420,7 +492,7 @@ h1, h2, h3, h4 {
 /* Drop Zone & Tap Zones */
 .drop-zone {
   width: 45px;
-  height: 250px;
+  height: 270px;
   border-radius: 14px;
   border: 2px dashed transparent;
   display: flex;
@@ -519,6 +591,12 @@ h1, h2, h3, h4 {
   filter: brightness(1.15);
 }
 
+.dialog-btn:disabled {
+  opacity: 0.35;
+  cursor: not-allowed;
+  pointer-events: none;
+}
+
 /* Status markers */
 .wrong-placement {
   animation: shake 0.4s ease-in-out;
@@ -556,6 +634,16 @@ h1, h2, h3, h4 {
   box-shadow: 0 0 25px var(--accent-cyan-glow) !important;
   transform: translateY(-25px) scale(1.08) !important;
   z-index: 100 !important;
+}
+
+.puttable-hint {
+  animation: puttable-glow 1.5s infinite alternate;
+  border: 1.5px solid var(--accent-cyan) !important;
+}
+
+@keyframes puttable-glow {
+  0% { box-shadow: 0 0 6px rgba(6, 182, 212, 0.15); }
+  100% { box-shadow: 0 0 22px rgba(6, 182, 212, 0.7); }
 }
 
 .to-discard {
@@ -624,5 +712,33 @@ h1, h2, h3, h4 {
   border-radius: 3px;
 }
 ::-webkit-scrollbar-thumb:hover {
-  background: rgba(255,255,255,0.25);
+  background: rgba(255, 255, 255, 0.25);
+}
+
+.correct-banner {
+  border-color: var(--correct-color) !important;
+  box-shadow: 0 4px 20px var(--correct-glow) !important;
+}
+
+.wrong-banner {
+  border-color: var(--wrong-color) !important;
+  box-shadow: 0 4px 20px var(--wrong-glow) !important;
+}
+
+.newly-placed-glow {
+  animation: newly-placed-glow-anim 1.5s infinite alternate;
+}
+
+@keyframes newly-placed-glow-anim {
+  0% { border-color: var(--accent-cyan) !important; box-shadow: 0 0 8px var(--accent-cyan-glow); }
+  100% { border-color: var(--correct-color) !important; box-shadow: 0 0 22px var(--correct-glow); }
+}
+
+.newly-placed-wrong-glow {
+  animation: newly-placed-wrong-glow-anim 1.5s infinite alternate;
+}
+
+@keyframes newly-placed-wrong-glow-anim {
+  0% { border-color: var(--wrong-color) !important; box-shadow: 0 0 8px var(--wrong-glow); }
+  100% { border-color: #f87171 !important; box-shadow: 0 0 22px rgba(239, 68, 68, 0.6); }
 }
