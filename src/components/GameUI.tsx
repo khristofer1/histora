@@ -25,6 +25,20 @@ export const GameUI: React.FC<GameUIProps> = ({ engine, onQuit }) => {
   const [refreshList, setRefreshList] = useState<string[]>([]);
   const [toast, setToast] = useState<{ message: string, type: 'success' | 'error' } | null>(null);
   const [feedbackData, setFeedbackData] = useState<{ isCorrect: boolean, placedCard: any } | null>(null);
+  const [zoomedItem, setZoomedItem] = useState<{ id: string; type: 'event' | 'character' } | null>(null);
+
+  const handleToggleZoom = (id: string | null, type: 'event' | 'character' | null) => {
+    if (!id || !type) {
+      setZoomedItem(null);
+    } else {
+      setZoomedItem(prev => {
+        if (prev && prev.id === id && prev.type === type) {
+          return null;
+        }
+        return { id, type };
+      });
+    }
+  };
 
   useEffect(() => {
     // Monkey patch the engine's onStateChange callback for Reactivity
@@ -194,6 +208,9 @@ export const GameUI: React.FC<GameUIProps> = ({ engine, onQuit }) => {
         onPlaceCharacter={handleCharacterPlacement}
         highlightedCardId={feedbackData?.placedCard?.id}
         highlightedCardIsCorrect={feedbackData?.isCorrect}
+        zoomedCardId={zoomedItem?.id || null}
+        zoomedType={zoomedItem?.type || null}
+        onToggleZoom={handleToggleZoom}
       />
 
       {playMode !== 'PLACEMENT_FEEDBACK' ? (

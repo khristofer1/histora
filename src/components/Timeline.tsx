@@ -10,6 +10,9 @@ interface TimelineProps {
   onPlaceCharacter: (eventId: string) => void;
   highlightedCardId?: string | null;
   highlightedCardIsCorrect?: boolean;
+  zoomedCardId: string | null;
+  zoomedType: 'event' | 'character' | null;
+  onToggleZoom: (id: string | null, type: 'event' | 'character' | null) => void;
 }
 
 export default function Timeline({ 
@@ -20,7 +23,10 @@ export default function Timeline({
   onPlaceEvent,
   onPlaceCharacter,
   highlightedCardId,
-  highlightedCardIsCorrect
+  highlightedCardIsCorrect,
+  zoomedCardId,
+  zoomedType,
+  onToggleZoom
 }: TimelineProps) {
   const areaRef = useRef<HTMLDivElement>(null);
 
@@ -36,7 +42,7 @@ export default function Timeline({
   }, [timeline.length]);
 
   return (
-    <div className="timeline-container">
+    <div className="timeline-container" onClick={() => onToggleZoom(null, null)}>
       <div className="timeline-area" id="timeline-area" ref={areaRef}>
         <div className="timeline-line"></div>
         
@@ -57,6 +63,9 @@ export default function Timeline({
                 onPlaceCharacter={() => onPlaceCharacter(timeline[i].event.id)}
                 isHighlighted={highlightedCardId === timeline[i].event.id}
                 highlightedIsCorrect={highlightedCardIsCorrect}
+                isZoomed={zoomedCardId === timeline[i].event.id}
+                zoomedType={zoomedType}
+                onToggleZoom={onToggleZoom}
               />
             )}
           </React.Fragment>
@@ -99,16 +108,35 @@ function TimelineCardElement({
   playMode, 
   onPlaceCharacter, 
   isHighlighted, 
-  highlightedIsCorrect 
+  highlightedIsCorrect,
+  isZoomed,
+  zoomedType,
+  onToggleZoom
 }: any) {
+  const isEventZoomed = isZoomed && zoomedType === 'event';
+  const isCharZoomed = isZoomed && zoomedType === 'character';
+
   let cardClass = `card event-card answer-side glass ${!tCard.isCorrect ? 'wrong-placement' : ''}`;
   if (isHighlighted) {
     cardClass += highlightedIsCorrect ? ' newly-placed-glow' : ' newly-placed-wrong-glow';
   }
+  if (isEventZoomed) {
+    cardClass += ' zoomed';
+  }
+
+  let wrapperClass = 'timeline-card-wrapper';
+  if (isEventZoomed) wrapperClass += ' zoomed-wrapper-event';
+  if (isCharZoomed) wrapperClass += ' zoomed-wrapper-char';
 
   return (
-    <div className="timeline-card-wrapper">
-      <div className={cardClass}>
+    <div className={wrapperClass} onClick={(e) => e.stopPropagation()}>
+      <div 
+        className={cardClass}
+        onClick={(e) => {
+          e.stopPropagation();
+          onToggleZoom(tCard.event.id, 'event');
+        }}
+      >
         <div className="date">{tCard.event.displayDate}</div>
         <div className="title">{tCard.event.title}</div>
         <div className="desc">{tCard.event.description}</div>
@@ -118,7 +146,13 @@ function TimelineCardElement({
       {(placedChar || playMode === 'PUT_SELECT_EVENT') && (
         <div className="placed-char-container">
           {placedChar ? (
-            <div className="card character-card glass">
+            <div 
+              className="card character-card glass"
+              onClick={(e) => {
+                e.stopPropagation();
+                onToggleZoom(tCard.event.id, 'character');
+              }}
+            >
               <div className="related" style={{ color: 'var(--correct-color)' }}>Terpasang</div>
               <div className="name">{placedChar.name}</div>
               <div className="desc">{placedChar.description}</div>
