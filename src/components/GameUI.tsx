@@ -83,9 +83,18 @@ export const GameUI: React.FC<GameUIProps> = ({ engine, onQuit }) => {
 
     setFeedbackData({ isCorrect, placedCard, clickedIndex: index, correctIndex });
     setPlayMode('PLACEMENT_FEEDBACK');
-    setIsSlideReleased(isCorrect);
+    setIsSlideReleased(false);
     setAnimationPhase('NONE');
     setZoomedItem({ id: placedCard.id, type: 'event' });
+    
+    // Slide card immediately to the correct position if wrong
+    if (!isCorrect) {
+      setTimeout(() => {
+        setIsSlideReleased(true);
+      }, 100);
+    } else {
+      setIsSlideReleased(true);
+    }
     
     if (isCorrect) {
       showToast('✅ Benar! Silakan pilih aksi giliran.', 'success');
@@ -105,57 +114,50 @@ export const GameUI: React.FC<GameUIProps> = ({ engine, onQuit }) => {
       setPlayMode('PLACEMENT_ANIMATING');
       setZoomedItem(null);
 
-      // Step 1: Slide card to correct position (duration: 500ms)
-      setIsSlideReleased(true);
-      setAnimationPhase('SLIDE');
-
+      // Step 2: Fly heart to corrected card (duration: 800ms)
+      setAnimationPhase('HEART_FLY');
+      
+      const heartEls = document.querySelectorAll('.heart-icon');
+      const lastHeartEl = heartEls[heartEls.length - 1];
+      const correctedCardEl = document.querySelector('.card.event-card.wrong-placement');
+      
+      if (lastHeartEl && correctedCardEl) {
+        const heartRect = lastHeartEl.getBoundingClientRect();
+        const cardRect = correctedCardEl.getBoundingClientRect();
+        setFlyingCross({
+          x: heartRect.left,
+          y: heartRect.top,
+          targetX: cardRect.left + cardRect.width / 2 - 16,
+          targetY: cardRect.top + cardRect.height / 2 - 16
+        });
+      }
+      
       setTimeout(() => {
-        // Step 2: Fly heart to corrected card (duration: 800ms)
-        setAnimationPhase('HEART_FLY');
-        
-        const heartEls = document.querySelectorAll('.heart-icon');
-        const lastHeartEl = heartEls[heartEls.length - 1];
-        const correctedCardEl = document.querySelector('.card.event-card.wrong-placement');
-        
-        if (lastHeartEl && correctedCardEl) {
-          const heartRect = lastHeartEl.getBoundingClientRect();
-          const cardRect = correctedCardEl.getBoundingClientRect();
-          setFlyingCross({
-            x: heartRect.left,
-            y: heartRect.top,
-            targetX: cardRect.left + cardRect.width / 2 - 16,
-            targetY: cardRect.top + cardRect.height / 2 - 16
+        setFlyingCross(null);
+        setAnimationPhase('DONE_HEART');
+
+        // Step 3: Draw character card (duration: 600ms)
+        const handScrollEl = document.querySelector('.hand-scroll');
+        if (handScrollEl) {
+          const handRect = handScrollEl.getBoundingClientRect();
+          setDrawingCard({
+            x: window.innerWidth / 2 - 92,
+            y: window.innerHeight / 2 - 110,
+            targetX: handRect.left + handRect.width - 200 - (window.innerWidth / 2 - 92),
+            targetY: handRect.top + 10 - (window.innerHeight / 2 - 110)
           });
+          setAnimationPhase('CARD_DRAW');
         }
         
         setTimeout(() => {
-          setFlyingCross(null);
-          setAnimationPhase('DONE_HEART');
+          setDrawingCard(null);
+          setAnimationPhase('NONE');
+          setIsSlideReleased(false);
+          setPlayMode('PLACE_EVENT');
+          setFeedbackData(null);
+        }, 600);
 
-          // Step 3: Draw character card (duration: 600ms)
-          const handScrollEl = document.querySelector('.hand-scroll');
-          if (handScrollEl) {
-            const handRect = handScrollEl.getBoundingClientRect();
-            setDrawingCard({
-              x: window.innerWidth / 2 - 92,
-              y: window.innerHeight / 2 - 110,
-              targetX: handRect.left + handRect.width - 200 - (window.innerWidth / 2 - 92),
-              targetY: handRect.top + 10 - (window.innerHeight / 2 - 110)
-            });
-            setAnimationPhase('CARD_DRAW');
-          }
-          
-          setTimeout(() => {
-            setDrawingCard(null);
-            setAnimationPhase('NONE');
-            setIsSlideReleased(false);
-            setPlayMode('PLACE_EVENT');
-            setFeedbackData(null);
-          }, 600);
-
-        }, 800);
-
-      }, 500);
+      }, 800);
     }
   };
 
