@@ -72,7 +72,7 @@ export default function Timeline({
     }
     
     prevCharEventIdsRef.current = currentKeys;
-  }, [charactersOnTimeline]);
+  }, [Object.keys(charactersOnTimeline).join(',')]);
 
   return (
     <div className="timeline-container" onClick={() => onToggleZoom(null, null)}>
