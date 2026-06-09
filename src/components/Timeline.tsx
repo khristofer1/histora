@@ -54,6 +54,26 @@ export default function Timeline({
     }
   }, [highlightedCardId]);
 
+  const prevCharEventIdsRef = useRef<string[]>(Object.keys(charactersOnTimeline));
+
+  // Scroll to event when a character card is successfully placed on it
+  useEffect(() => {
+    const currentKeys = Object.keys(charactersOnTimeline);
+    const prevKeys = prevCharEventIdsRef.current;
+    
+    const addedEventId = currentKeys.find(key => !prevKeys.includes(key));
+    if (addedEventId && areaRef.current) {
+      setTimeout(() => {
+        const targetEl = areaRef.current?.querySelector(`[data-event-id="${addedEventId}"]`);
+        if (targetEl) {
+          targetEl.scrollIntoView({ behavior: 'smooth', block: 'nearest', inline: 'center' });
+        }
+      }, 100);
+    }
+    
+    prevCharEventIdsRef.current = currentKeys;
+  }, [charactersOnTimeline]);
+
   return (
     <div className="timeline-container" onClick={() => onToggleZoom(null, null)}>
       <div className="timeline-area" id="timeline-area" ref={areaRef}>
@@ -144,7 +164,7 @@ function TimelineCardElement({
   if (isCharZoomed) wrapperClass += ' zoomed-wrapper-char';
 
   return (
-    <div className={wrapperClass} onClick={(e) => e.stopPropagation()}>
+    <div className={wrapperClass} data-event-id={tCard.event.id} onClick={(e) => e.stopPropagation()}>
       <div 
         className={cardClass}
         onClick={(e) => {
