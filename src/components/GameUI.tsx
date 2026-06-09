@@ -50,6 +50,12 @@ export const GameUI: React.FC<GameUIProps> = ({ engine, onQuit }) => {
   }, [engine]);
 
   useEffect(() => {
+    if (gameState.timeline.length > 0) {
+      setZoomedItem({ id: gameState.timeline[0].event.id, type: 'event' });
+    }
+  }, []);
+
+  useEffect(() => {
     if (!gameState.currentTurnEventCard && playMode === 'PLACE_EVENT') {
       setPlayMode('ACTION_CHOOSE');
     }
