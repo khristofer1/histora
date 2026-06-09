@@ -175,7 +175,7 @@ function TimelineCardElement({
         <div className="date">{tCard.event.displayDate}</div>
         <div className="title">{tCard.event.title}</div>
         <div className="desc">{tCard.event.description}</div>
-        {(!tCard.isCorrect && !isEventZoomed && !(playMode === 'PLACEMENT_FEEDBACK' && isHighlighted)) && (
+        {(!tCard.isCorrect && !isEventZoomed) && (
           <div className="red-cross">❌</div>
         )}
       </div>
