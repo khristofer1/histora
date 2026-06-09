@@ -225,7 +225,7 @@ h1, h2, h3, h4 {
   display: flex;
   align-items: center;
   gap: 1rem;
-  padding: 1rem 1.5rem;
+  padding: 0.75rem 1.25rem;
   border-radius: 12px;
   border: 1px solid var(--accent-blue);
   box-shadow: 0 4px 20px var(--accent-blue-glow);
@@ -233,7 +233,7 @@ h1, h2, h3, h4 {
 }
 
 .question-icon {
-  font-size: 2rem;
+  font-size: 1.5rem;
   color: var(--accent-blue);
   flex-shrink: 0;
 }
@@ -245,7 +245,7 @@ h1, h2, h3, h4 {
 }
 
 .question-label {
-  font-size: 0.75rem;
+  font-size: 0.68rem;
   font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 1px;
@@ -253,7 +253,7 @@ h1, h2, h3, h4 {
 }
 
 .question-text {
-  font-size: 0.95rem;
+  font-size: 0.85rem;
   line-height: 1.4;
   font-weight: 500;
   color: var(--text-primary);
