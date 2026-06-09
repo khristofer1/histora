@@ -10,6 +10,9 @@ interface TimelineProps {
   onPlaceCharacter: (eventId: string) => void;
   highlightedCardId?: string | null;
   highlightedCardIsCorrect?: boolean;
+  clickedIndex?: number;
+  correctIndex?: number;
+  isSlideReleased?: boolean;
   zoomedCardId: string | null;
   zoomedType: 'event' | 'character' | null;
   onToggleZoom: (id: string | null, type: 'event' | 'character' | null) => void;
@@ -24,6 +27,9 @@ export default function Timeline({
   onPlaceCharacter,
   highlightedCardId,
   highlightedCardIsCorrect,
+  clickedIndex,
+  correctIndex,
+  isSlideReleased,
   zoomedCardId,
   zoomedType,
   onToggleZoom
@@ -96,6 +102,9 @@ export default function Timeline({
                 onPlaceCharacter={() => onPlaceCharacter(timeline[i].event.id)}
                 isHighlighted={highlightedCardId === timeline[i].event.id}
                 highlightedIsCorrect={highlightedCardIsCorrect}
+                clickedIndex={clickedIndex}
+                correctIndex={correctIndex}
+                isSlideReleased={isSlideReleased}
                 isZoomed={zoomedCardId === timeline[i].event.id}
                 zoomedType={zoomedType}
                 onToggleZoom={onToggleZoom}
@@ -146,7 +155,10 @@ function TimelineCardElement({
   highlightedIsCorrect,
   isZoomed,
   zoomedType,
-  onToggleZoom
+  onToggleZoom,
+  clickedIndex,
+  correctIndex,
+  isSlideReleased
 }: any) {
   const isEventZoomed = isZoomed && zoomedType === 'event';
   const isCharZoomed = isZoomed && zoomedType === 'character';
@@ -163,8 +175,14 @@ function TimelineCardElement({
   if (isEventZoomed) wrapperClass += ' zoomed-wrapper-event';
   if (isCharZoomed) wrapperClass += ' zoomed-wrapper-char';
 
+  let style: React.CSSProperties = {};
+  if (isHighlighted && !highlightedIsCorrect && !isSlideReleased && clickedIndex !== undefined && correctIndex !== undefined) {
+    const offset = (clickedIndex - correctIndex) * 230;
+    style = { transform: `translateX(${offset}px)` };
+  }
+
   return (
-    <div className={wrapperClass} data-event-id={tCard.event.id} onClick={(e) => e.stopPropagation()}>
+    <div className={wrapperClass} data-event-id={tCard.event.id} onClick={(e) => e.stopPropagation()} style={style}>
       <div 
         className={cardClass}
         onClick={(e) => {

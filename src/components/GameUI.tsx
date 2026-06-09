@@ -8,6 +8,7 @@ import ActionModal from './ActionModal';
 type PlayMode = 
   | 'PLACE_EVENT' 
   | 'PLACEMENT_FEEDBACK'
+  | 'PLACEMENT_ANIMATING'
   | 'ACTION_CHOOSE' 
   | 'PUT_SELECT_CHAR' 
   | 'PUT_SELECT_EVENT' 
@@ -24,8 +25,14 @@ export const GameUI: React.FC<GameUIProps> = ({ engine, onQuit }) => {
   const [selectedCharId, setSelectedCharId] = useState<string | null>(null);
   const [refreshList, setRefreshList] = useState<string[]>([]);
   const [toast, setToast] = useState<{ message: string, type: 'success' | 'error' } | null>(null);
-  const [feedbackData, setFeedbackData] = useState<{ isCorrect: boolean, placedCard: any } | null>(null);
+  const [feedbackData, setFeedbackData] = useState<{ isCorrect: boolean, placedCard: any, clickedIndex?: number, correctIndex?: number } | null>(null);
   const [zoomedItem, setZoomedItem] = useState<{ id: string; type: 'event' | 'character' } | null>(null);
+
+  // Animation states
+  const [animationPhase, setAnimationPhase] = useState<'NONE' | 'SLIDE' | 'HEART_FLY' | 'DONE_HEART' | 'CARD_DRAW'>('NONE');
+  const [isSlideReleased, setIsSlideReleased] = useState(false);
+  const [flyingCross, setFlyingCross] = useState<{ x: number; y: number; targetX: number; targetY: number } | null>(null);
+  const [drawingCard, setDrawingCard] = useState<{ x: number; y: number; targetX: number; targetY: number } | null>(null);
 
   const handleToggleZoom = (id: string | null, type: 'event' | 'character' | null) => {
     if (!id || !type) {
@@ -71,8 +78,13 @@ export const GameUI: React.FC<GameUIProps> = ({ engine, onQuit }) => {
     if (!placedCard) return;
 
     const isCorrect = engine.placeEvent(index);
-    setFeedbackData({ isCorrect, placedCard });
+    const updatedState = engine.getState();
+    const correctIndex = updatedState.timeline.findIndex(t => t.event.id === placedCard.id);
+
+    setFeedbackData({ isCorrect, placedCard, clickedIndex: index, correctIndex });
     setPlayMode('PLACEMENT_FEEDBACK');
+    setIsSlideReleased(isCorrect);
+    setAnimationPhase('NONE');
     setZoomedItem({ id: placedCard.id, type: 'event' });
     
     if (isCorrect) {
@@ -80,17 +92,71 @@ export const GameUI: React.FC<GameUIProps> = ({ engine, onQuit }) => {
     } else {
       showToast('❌ Salah urutan! Sistem membetulkannya, nyawa -1, & ambil 1 tokoh.', 'error');
     }
-    setGameState(engine.getState());
+    setGameState(updatedState);
   };
 
   const handleCloseFeedback = () => {
     if (feedbackData?.isCorrect) {
       setPlayMode('ACTION_CHOOSE');
+      setFeedbackData(null);
+      setZoomedItem(null);
     } else {
-      setPlayMode('PLACE_EVENT');
+      // Run visual transition animation sequence for incorrect placement
+      setPlayMode('PLACEMENT_ANIMATING');
+      setZoomedItem(null);
+
+      // Step 1: Slide card to correct position (duration: 500ms)
+      setIsSlideReleased(true);
+      setAnimationPhase('SLIDE');
+
+      setTimeout(() => {
+        // Step 2: Fly heart to corrected card (duration: 800ms)
+        setAnimationPhase('HEART_FLY');
+        
+        const heartEls = document.querySelectorAll('.heart-icon');
+        const lastHeartEl = heartEls[heartEls.length - 1];
+        const correctedCardEl = document.querySelector('.card.event-card.wrong-placement');
+        
+        if (lastHeartEl && correctedCardEl) {
+          const heartRect = lastHeartEl.getBoundingClientRect();
+          const cardRect = correctedCardEl.getBoundingClientRect();
+          setFlyingCross({
+            x: heartRect.left,
+            y: heartRect.top,
+            targetX: cardRect.left + cardRect.width / 2 - 16,
+            targetY: cardRect.top + cardRect.height / 2 - 16
+          });
+        }
+        
+        setTimeout(() => {
+          setFlyingCross(null);
+          setAnimationPhase('DONE_HEART');
+
+          // Step 3: Draw character card (duration: 600ms)
+          const handScrollEl = document.querySelector('.hand-scroll');
+          if (handScrollEl) {
+            const handRect = handScrollEl.getBoundingClientRect();
+            setDrawingCard({
+              x: window.innerWidth / 2 - 92,
+              y: window.innerHeight / 2 - 110,
+              targetX: handRect.left + handRect.width - 200 - (window.innerWidth / 2 - 92),
+              targetY: handRect.top + 10 - (window.innerHeight / 2 - 110)
+            });
+            setAnimationPhase('CARD_DRAW');
+          }
+          
+          setTimeout(() => {
+            setDrawingCard(null);
+            setAnimationPhase('NONE');
+            setIsSlideReleased(false);
+            setPlayMode('PLACE_EVENT');
+            setFeedbackData(null);
+          }, 600);
+
+        }, 800);
+
+      }, 500);
     }
-    setFeedbackData(null);
-    setZoomedItem(null);
   };
 
   const handleCharacterPlacement = (eventId: string) => {
@@ -152,7 +218,27 @@ export const GameUI: React.FC<GameUIProps> = ({ engine, onQuit }) => {
     <>
       <div className="top-bar">
         <h2>Histora</h2>
-        <div className="lives">{'❤️'.repeat(gameState.lives)}</div>
+        <div className="lives">
+          {Array.from({ length: 
+            (playMode === 'PLACEMENT_FEEDBACK' && feedbackData && !feedbackData.isCorrect) || 
+            (playMode === 'PLACEMENT_ANIMATING' && animationPhase !== 'DONE_HEART' && animationPhase !== 'CARD_DRAW')
+              ? gameState.lives + 1 
+              : gameState.lives 
+          }).map((_, idx, arr) => (
+            <span 
+              key={idx} 
+              className={`heart-icon`}
+              style={{ 
+                transition: 'opacity 0.2s ease, transform 0.2s ease', 
+                opacity: idx === arr.length - 1 && animationPhase === 'HEART_FLY' ? 0 : 1,
+                transform: idx === arr.length - 1 && animationPhase === 'HEART_FLY' ? 'scale(0.5)' : 'scale(1)',
+                display: 'inline-block'
+              }}
+            >
+              ❤️
+            </span>
+          ))}
+        </div>
       </div>
       
       {playMode === 'PLACE_EVENT' && gameState.currentTurnEventCard && (
@@ -216,6 +302,9 @@ export const GameUI: React.FC<GameUIProps> = ({ engine, onQuit }) => {
         onPlaceCharacter={handleCharacterPlacement}
         highlightedCardId={feedbackData?.placedCard?.id}
         highlightedCardIsCorrect={feedbackData?.isCorrect}
+        clickedIndex={feedbackData?.clickedIndex}
+        correctIndex={feedbackData?.correctIndex}
+        isSlideReleased={isSlideReleased}
         zoomedCardId={zoomedItem?.id || null}
         zoomedType={zoomedItem?.type || null}
         onToggleZoom={handleToggleZoom}
@@ -283,6 +372,40 @@ export const GameUI: React.FC<GameUIProps> = ({ engine, onQuit }) => {
       <div id="toast" className={`toast ${toast ? `show ${toast.type}` : ''}`}>
         {toast?.message}
       </div>
+
+      {flyingCross && (
+        <div 
+          className="flying-cross-anim"
+          style={{
+            position: 'fixed',
+            left: flyingCross.x,
+            top: flyingCross.y,
+            '--target-x': `${flyingCross.targetX - flyingCross.x}px`,
+            '--target-y': `${flyingCross.targetY - flyingCross.y}px`,
+          } as React.CSSProperties}
+        >
+          ❌
+        </div>
+      )}
+
+      {drawingCard && (
+        <div 
+          className="drawing-card-anim"
+          style={{
+            position: 'fixed',
+            left: drawingCard.x,
+            top: drawingCard.y,
+            '--target-x': `${drawingCard.targetX - drawingCard.x}px`,
+            '--target-y': `${drawingCard.targetY - drawingCard.y}px`,
+          } as React.CSSProperties}
+        >
+          <div className="card character-card glass" style={{ width: '100%', height: '100%', padding: '0.8rem', border: '1px solid var(--accent-cyan)' }}>
+            <div className="related">Tokoh Baru</div>
+            <div className="name" style={{ fontSize: '0.95rem' }}>Menarik...</div>
+            <div className="desc" style={{ fontSize: '0.8rem' }}>Kartu tokoh penalti ditambahkan ke tangan.</div>
+          </div>
+        </div>
+      )}
     </>
   );
 };
