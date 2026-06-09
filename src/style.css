@@ -301,6 +301,8 @@ h1, h2, h3, h4 {
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
   overflow: hidden;
   flex-shrink: 0;
+  backface-visibility: hidden;
+  transform: translate3d(0, 0, 0);
 }
 
 .event-card {
@@ -346,6 +348,8 @@ h1, h2, h3, h4 {
   color: var(--text-secondary);
   line-height: 1.4;
   overflow-y: auto;
+  backface-visibility: hidden;
+  transform: translate3d(0, 0, 0);
 }
 
 /* Character Card */
