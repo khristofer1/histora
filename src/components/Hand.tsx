@@ -25,10 +25,10 @@ export default function Hand({
     <div className="hand-area" id="hand-area">
       <div className="hand-scroll">
         {playerHand.map((char, idx) => {
-          const isSelectable = playMode === 'PUT_SELECT_CHAR';
+          const isPuttable = puttableCharIds.includes(char.id) && playMode !== 'REFRESH_SELECT';
+          const isSelectable = playMode === 'PUT_SELECT_CHAR' && isPuttable;
           const isSelected = selectedCharId === char.id;
           const isToDiscard = refreshList.includes(char.id);
-          const isPuttable = puttableCharIds.includes(char.id) && playMode !== 'REFRESH_SELECT';
           
           let classNames = 'card character-card glass in-hand';
           if (isSelectable) classNames += ' selectable';
