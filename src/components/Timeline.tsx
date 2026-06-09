@@ -53,11 +53,9 @@ export default function Timeline({
     }
   }, [zoomedCardId]);
 
-  const hasZoomed = !!zoomedCardId;
-
   return (
     <div className="timeline-container" onClick={() => onToggleZoom(null, null)}>
-      <div className={`timeline-area ${hasZoomed ? 'has-zoomed' : ''}`} id="timeline-area" ref={areaRef}>
+      <div className="timeline-area" id="timeline-area" ref={areaRef}>
         <div className="timeline-line"></div>
         
         {Array.from({ length: timeline.length + 1 }).map((_, i) => (
