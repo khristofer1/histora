@@ -103,10 +103,12 @@ function DropZone({ index, playMode, currentTurnEventCard, onPlaceEvent }: any) 
       onDragLeave={() => setIsDragOver(false)}
       onDrop={(e) => {
         e.preventDefault();
+        e.stopPropagation();
         setIsDragOver(false);
         if (isActive) onPlaceEvent(index);
       }}
-      onClick={() => {
+      onClick={(e) => {
+        e.stopPropagation();
         if (isActive) onPlaceEvent(index);
       }}
     >
