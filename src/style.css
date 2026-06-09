@@ -233,7 +233,7 @@ h1, h2, h3, h4 {
 }
 
 .question-icon {
-  font-size: 1.5rem;
+  font-size: 2rem;
   color: var(--accent-blue);
   flex-shrink: 0;
 }
@@ -245,15 +245,14 @@ h1, h2, h3, h4 {
 }
 
 .question-label {
-  font-size: 0.68rem;
+  font-size: 0.75rem;
   font-weight: 700;
-  text-transform: uppercase;
   letter-spacing: 1px;
   color: var(--accent-cyan);
 }
 
 .question-text {
-  font-size: 0.85rem;
+  font-size: 0.95rem;
   line-height: 1.4;
   font-weight: 500;
   color: var(--text-primary);
@@ -329,7 +328,7 @@ h1, h2, h3, h4 {
 .event-card .date {
   font-family: var(--font-heading);
   color: var(--accent-cyan);
-  font-size: 0.85rem;
+  font-size: 0.9rem;
   font-weight: 700;
   margin-bottom: 0.6rem;
 }
@@ -337,7 +336,7 @@ h1, h2, h3, h4 {
 .event-card .title {
   font-family: var(--font-heading);
   font-weight: 600;
-  font-size: 0.85rem;
+  font-size: 0.95rem;
   line-height: 1.3;
   margin-bottom: 0.5rem;
 }

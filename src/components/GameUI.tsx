@@ -151,7 +151,7 @@ export const GameUI: React.FC<GameUIProps> = ({ engine, onQuit }) => {
         <div className="question-banner glass">
           <div className="question-icon">❓</div>
           <div className="question-content">
-            <div className="question-label">Pertanyaan Saat Ini (Ketuk slot + untuk menjawab):</div>
+            <div className="question-label">Pertanyaan saat ini (ketuk slot + untuk menjawab):</div>
             <div className="question-text">{gameState.currentTurnEventCard.question}</div>
           </div>
         </div>
