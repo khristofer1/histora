@@ -67,6 +67,7 @@ export const GameUI: React.FC<GameUIProps> = ({ engine, onQuit }) => {
     const isCorrect = engine.placeEvent(index);
     setFeedbackData({ isCorrect, placedCard });
     setPlayMode('PLACEMENT_FEEDBACK');
+    setZoomedItem({ id: placedCard.id, type: 'event' });
     
     if (isCorrect) {
       showToast('✅ Benar! Silakan pilih aksi giliran.', 'success');
@@ -83,6 +84,7 @@ export const GameUI: React.FC<GameUIProps> = ({ engine, onQuit }) => {
       setPlayMode('PLACE_EVENT');
     }
     setFeedbackData(null);
+    setZoomedItem(null);
   };
 
   const handleCharacterPlacement = (eventId: string) => {

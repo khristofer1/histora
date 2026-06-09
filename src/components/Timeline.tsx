@@ -30,16 +30,28 @@ export default function Timeline({
 }: TimelineProps) {
   const areaRef = useRef<HTMLDivElement>(null);
 
-  // Auto-scroll to end on new items
+  // Auto-scroll to end on new items (only if no card is zoomed)
   useEffect(() => {
-    if (areaRef.current) {
+    if (areaRef.current && !zoomedCardId) {
       setTimeout(() => {
         if (areaRef.current) {
           areaRef.current.scrollLeft = areaRef.current.scrollWidth;
         }
       }, 100);
     }
-  }, [timeline.length]);
+  }, [timeline.length, zoomedCardId]);
+
+  // Scroll zoomed card into view
+  useEffect(() => {
+    if (zoomedCardId && areaRef.current) {
+      setTimeout(() => {
+        const zoomedEl = areaRef.current?.querySelector('.event-card.zoomed');
+        if (zoomedEl) {
+          zoomedEl.scrollIntoView({ behavior: 'smooth', block: 'nearest', inline: 'center' });
+        }
+      }, 50);
+    }
+  }, [zoomedCardId]);
 
   return (
     <div className="timeline-container" onClick={() => onToggleZoom(null, null)}>
