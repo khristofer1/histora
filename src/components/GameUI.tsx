@@ -235,7 +235,7 @@ export const GameUI: React.FC<GameUIProps> = ({ engine, onQuit }) => {
       ) : (
         feedbackData && (
           <div className="hand-area" style={{ zIndex: 30 }}>
-            <div className="glass" style={{ padding: '1.2rem 2rem', borderRadius: '16px', display: 'flex', flexDirection: 'column', alignItems: 'center', gap: '0.8rem', maxWidth: '400px', width: '90%', margin: '0 auto', border: `1px solid ${feedbackData.isCorrect ? 'var(--correct-color)' : 'var(--wrong-color)'}` }}>
+            <div className="glass" style={{ padding: '1.2rem 2rem', borderRadius: '16px', display: 'flex', flexDirection: 'column', alignItems: 'center', gap: '0.8rem', maxWidth: '400px', width: '90%', margin: '0 auto 2.5rem auto', border: `1px solid ${feedbackData.isCorrect ? 'var(--correct-color)' : 'var(--wrong-color)'}` }}>
               <h4 style={{ color: feedbackData.isCorrect ? 'var(--correct-color)' : 'var(--wrong-color)', fontSize: '1.1rem' }}>
                 {feedbackData.isCorrect ? 'Urutan Tepat!' : 'Urutan Kurang Tepat!'}
               </h4>
