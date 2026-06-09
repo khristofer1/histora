@@ -140,7 +140,9 @@ function TimelineCardElement({
         <div className="date">{tCard.event.displayDate}</div>
         <div className="title">{tCard.event.title}</div>
         <div className="desc">{tCard.event.description}</div>
-        {!tCard.isCorrect && <div className="red-cross">❌</div>}
+        {(!tCard.isCorrect && !isEventZoomed && !(playMode === 'PLACEMENT_FEEDBACK' && isHighlighted)) && (
+          <div className="red-cross">❌</div>
+        )}
       </div>
 
       {(placedChar || playMode === 'PUT_SELECT_EVENT') && (
