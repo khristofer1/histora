@@ -11,8 +11,7 @@ export default function ActionModal({ onPut, onRefresh, onPass, canPut }: Action
   return (
     <div className="dialog-overlay">
       <div className="dialog-box glass" style={{ border: '1px solid var(--accent-cyan)' }}>
-        <h3>Urutan Benar!</h3>
-        <p style={{ color: 'var(--text-secondary)', fontSize: '0.9rem' }}>Peristiwa berhasil diurutkan. Pilih langkah Anda selanjutnya:</p>
+        <p style={{ color: 'var(--text-secondary)', fontSize: '0.9rem' }}>Pilih langkah Anda selanjutnya:</p>
         <div className="dialog-buttons">
           <button onClick={onPut} className="dialog-btn primary" disabled={!canPut}>Pasang Tokoh</button>
           <button onClick={onRefresh} className="dialog-btn secondary">Tukar Tokoh</button>
