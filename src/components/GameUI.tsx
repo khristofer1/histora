@@ -247,11 +247,11 @@ export const GameUI: React.FC<GameUIProps> = ({ engine, onQuit }) => {
               <h4 style={{ color: feedbackData.isCorrect ? 'var(--correct-color)' : 'var(--wrong-color)', fontSize: '1.1rem' }}>
                 {feedbackData.isCorrect ? 'Urutan Tepat!' : 'Urutan Kurang Tepat!'}
               </h4>
-              <p style={{ fontSize: '0.82rem', color: 'var(--text-secondary)', textAlign: 'center', margin: '0 0 0.4rem 0', lineHeight: 1.4 }}>
-                {feedbackData.isCorrect 
-                  ? 'Luar biasa! Perhatikan peristiwa tersebut di linimasa sebelum menentukan aksi giliran berikutnya.'
-                  : 'Sistem telah mengoreksi posisinya pada linimasa. Nyawa berkurang 1 dan kamu mendapat kartu tokoh penalti.'}
-              </p>
+              {!feedbackData.isCorrect && (
+                <p style={{ fontSize: '0.82rem', color: 'var(--text-secondary)', textAlign: 'center', margin: '0 0 0.4rem 0', lineHeight: 1.4 }}>
+                  Sistem telah mengoreksi posisinya pada linimasa. Nyawa berkurang 1 dan kamu mendapat kartu tokoh penalti.
+                </p>
+              )}
               <button 
                 onClick={handleCloseFeedback} 
                 className="dialog-btn primary" 
