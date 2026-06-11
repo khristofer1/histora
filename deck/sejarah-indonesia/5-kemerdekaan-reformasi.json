@@ -1,0 +1,272 @@
+[
+  {
+    "event_card": {
+      "id": "evt-01",
+      "question": "Kapan teks Proklamasi Kemerdekaan Indonesia dibacakan?",
+      "displayDate": "17 Agustus 1945",
+      "sortDate": 19450817,
+      "title": "Proklamasi Kemerdekaan RI",
+      "description": "Pembacaan teks proklamasi di Jalan Pegangsaan Timur No. 56, Jakarta, yang menandai lahirnya negara Republik Indonesia yang merdeka dan berdaulat."
+    },
+    "character_card": {
+      "id": "chr-01",
+      "name": "Ir. Soekarno",
+      "description": "Bapak Proklamator yang menyusun dan membacakan teks proklamasi sekaligus menjadi Presiden Pertama Republik Indonesia."
+    }
+  },
+  {
+    "event_card": {
+      "id": "evt-02",
+      "question": "Kapan pertempuran fisik terbesar untuk mempertahankan kemerdekaan meletus di Surabaya?",
+      "displayDate": "10 November 1945",
+      "sortDate": 19451110,
+      "title": "Pertempuran Surabaya",
+      "description": "Perlawanan heroik arek-arek Suroboyo melawan pasukan Sekutu (Inggris) yang mengeluarkan ultimatum agar pihak Indonesia menyerahkan senjata. Kini diperingati sebagai Hari Pahlawan."
+    },
+    "character_card": {
+      "id": "chr-02",
+      "name": "Sutomo (Bung Tomo)",
+      "description": "Pemimpin barisan rakyat yang membakar semangat juang pemuda Surabaya melalui pidato-pidatonya yang berapi-api di radio."
+    }
+  },
+  {
+    "event_card": {
+      "id": "evt-03",
+      "question": "Kapan TNI melancarkan serangan kejutan besar-besaran ke ibu kota Yogyakarta untuk membuktikan RI masih ada?",
+      "displayDate": "1 Maret 1949",
+      "sortDate": 19490301,
+      "title": "Serangan Umum 1 Maret",
+      "description": "Serangan taktis selama 6 jam untuk menduduki Yogyakarta yang membuka mata dunia internasional bahwa TNI belum hancur seperti propaganda Belanda."
+    },
+    "character_card": {
+      "id": "chr-03",
+      "name": "Sri Sultan Hamengkubuwono IX",
+      "description": "Raja Yogyakarta yang menggagas ide serangan mendadak tersebut dan meminjamkan keratonnya sebagai basis logistik dan persembunyian para pejuang."
+    }
+  },
+  {
+    "event_card": {
+      "id": "evt-04",
+      "question": "Kapan Belanda secara resmi menyerahkan kedaulatan kepada Republik Indonesia Serikat (RIS)?",
+      "displayDate": "27 Desember 1949",
+      "sortDate": 19491227,
+      "title": "Penyerahan Kedaulatan (Hasil KMB)",
+      "description": "Penandatanganan dokumen penyerahan kedaulatan di Amsterdam dan Jakarta sebagai hasil kesepakatan Konferensi Meja Bundar, mengakhiri perang kemerdekaan."
+    },
+    "character_card": {
+      "id": "chr-04",
+      "name": "Drs. Mohammad Hatta",
+      "description": "Wakil Presiden sekaligus ketua delegasi Indonesia di KMB yang menandatangani naskah pengakuan kedaulatan di Istana Dam, Amsterdam."
+    }
+  },
+  {
+    "event_card": {
+      "id": "evt-05",
+      "question": "Kapan mosi bersejarah yang mengembalikan bentuk negara dari RIS kembali menjadi NKRI disetujui parlemen?",
+      "displayDate": "3 April 1950",
+      "sortDate": 19500403,
+      "title": "Mosi Integral Natsir",
+      "description": "Sebuah manuver politik di parlemen yang berhasil membujuk negara-negara bagian bentukan Belanda untuk membubarkan diri secara sukarela dan melebur ke dalam NKRI."
+    },
+    "character_card": {
+      "id": "chr-05",
+      "name": "Mohammad Natsir",
+      "description": "Tokoh Partai Masyumi yang merumuskan mosi ini berkat kecerdasannya dalam melobi para perdana menteri negara-negara bagian RIS."
+    }
+  },
+  {
+    "event_card": {
+      "id": "evt-06",
+      "question": "Kapan Konferensi Asia-Afrika (KAA) yang menghimpun negara-negara baru merdeka diselenggarakan?",
+      "displayDate": "18 April 1955",
+      "sortDate": 19550418,
+      "title": "Konferensi Asia-Afrika",
+      "description": "Pertemuan 29 negara Asia dan Afrika di Gedung Merdeka, Bandung, yang melahirkan 'Dasasila Bandung' dan menjadi cikal bakal Gerakan Non-Blok."
+    },
+    "character_card": {
+      "id": "chr-06",
+      "name": "Ali Sastroamidjojo",
+      "description": "Perdana Menteri Indonesia yang memprakarsai dan menjadi ketua dalam pelaksanaan konferensi berskala internasional pertama di Indonesia tersebut."
+    }
+  },
+  {
+    "event_card": {
+      "id": "evt-07",
+      "question": "Kapan pemilihan umum demokratis pertama dalam sejarah Indonesia dilaksanakan untuk memilih anggota DPR?",
+      "displayDate": "29 September 1955",
+      "sortDate": 19550929,
+      "title": "Pemilu Pertama 1955",
+      "description": "Pemilu pertama masa Demokrasi Parlementer yang dinilai paling jujur dan adil dalam sejarah, memunculkan PNI, Masyumi, NU, dan PKI sebagai empat partai terbesar."
+    },
+    "character_card": {
+      "id": "chr-07",
+      "name": "Burhanuddin Harahap",
+      "description": "Perdana Menteri dari Masyumi yang berhasil menyelenggarakan Pemilu 1955 dengan sukses meski menghadapi kondisi politik yang sangat labil."
+    }
+  },
+  {
+    "event_card": {
+      "id": "evt-08",
+      "question": "Kapan dikeluarkannya dekrit yang membubarkan Konstituante dan memulai era Demokrasi Terpimpin?",
+      "displayDate": "5 Juli 1959",
+      "sortDate": 19590705,
+      "title": "Dekrit Presiden 5 Juli 1959",
+      "description": "Keputusan sepihak Presiden Soekarno yang didukung militer untuk kembali kepada UUD 1945 karena Badan Konstituante gagal menyusun konstitusi baru."
+    },
+    "character_card": {
+      "id": "chr-08",
+      "name": "Ir. Djuanda Kartawidjaja",
+      "description": "Perdana Menteri terakhir masa Demokrasi Parlementer yang mengusulkan konsep kembali ke UUD 1945 untuk mengatasi kebuntuan politik."
+    }
+  },
+  {
+    "event_card": {
+      "id": "evt-09",
+      "question": "Kapan komando militer untuk merebut Irian Barat dari tangan Belanda diserukan?",
+      "displayDate": "19 Desember 1961",
+      "sortDate": 19611219,
+      "title": "Trikora (Tri Komando Rakyat)",
+      "description": "Pidato Presiden Soekarno di alun-alun Yogyakarta yang menyerukan penggagalan negara boneka Papua bentukan Belanda dan pengerahan militer."
+    },
+    "character_card": {
+      "id": "chr-09",
+      "name": "Mayjen Soeharto",
+      "description": "Perwira tinggi TNI AD yang ditunjuk langsung sebagai Panglima Komando Mandala untuk memimpin operasi militer pembebasan Irian Barat."
+    }
+  },
+  {
+    "event_card": {
+      "id": "evt-10",
+      "question": "Kapan komando Dwikora diserukan sebagai bentuk konfrontasi anti-imperialisme terhadap Malaysia?",
+      "displayDate": "3 Mei 1964",
+      "sortDate": 19640503,
+      "title": "Dwikora (Konfrontasi Malaysia)",
+      "description": "Seruan Ganyang Malaysia di Jakarta sebagai reaksi atas pembentukan Federasi Malaysia yang dianggap Bung Karno sebagai proyek neokolonialisme Inggris."
+    },
+    "character_card": {
+      "id": "chr-10",
+      "name": "Subandrio",
+      "description": "Menteri Luar Negeri merangkap Kepala Badan Pusat Intelijen yang menjadi arsitek utama kebijakan luar negeri agresif Indonesia masa Demokrasi Terpimpin."
+    }
+  },
+  {
+    "event_card": {
+      "id": "evt-11",
+      "question": "Kapan terjadinya peristiwa penculikan berdarah terhadap enam jenderal dan satu perwira TNI AD?",
+      "displayDate": "30 September 1965",
+      "sortDate": 19650930,
+      "title": "Gerakan 30 September (G30S)",
+      "description": "Kudeta militer yang menewaskan para perwira tinggi militer di Lubang Buaya, yang memicu transisi kekuasaan dan pembersihan besar-besaran terhadap anggota PKI."
+    },
+    "character_card": {
+      "id": "chr-11",
+      "name": "Jenderal Ahmad Yani",
+      "description": "Menteri/Panglima Angkatan Darat (Menpangad) yang menjadi target utama penculikan dan gugur di kediamannya pada dini hari 1 Oktober 1965."
+    }
+  },
+  {
+    "event_card": {
+      "id": "evt-12",
+      "question": "Kapan surat perintah yang menjadi tonggak transisi kekuasaan dari Orde Lama ke Orde Baru dikeluarkan?",
+      "displayDate": "11 Maret 1966",
+      "sortDate": 19660311,
+      "title": "Supersemar",
+      "description": "Surat Perintah Sebelas Maret yang diberikan Soekarno kepada Soeharto untuk mengambil segala tindakan yang dianggap perlu demi memulihkan keamanan dan ketertiban."
+    },
+    "character_card": {
+      "id": "chr-12",
+      "name": "Letjen Soeharto",
+      "description": "Panglima Kostrad yang menggunakan Supersemar untuk mengambil alih kendali pemerintahan secara de facto dan membubarkan PKI keesokan harinya."
+    }
+  },
+  {
+    "event_card": {
+      "id": "evt-13",
+      "question": "Kapan kerusuhan besar yang diawali unjuk rasa mahasiswa menolak dominasi modal asing meletus di Jakarta?",
+      "displayDate": "15 Januari 1974",
+      "sortDate": 19740115,
+      "title": "Peristiwa Malari",
+      "description": "Malapetaka Lima Belas Januari. Kerusuhan dan pembakaran di Jakarta saat kunjungan Perdana Menteri Jepang Kakuei Tanaka, sebagai protes atas kebijakan ekonomi Orde Baru."
+    },
+    "character_card": {
+      "id": "chr-13",
+      "name": "Hariman Siregar",
+      "description": "Ketua Dewan Mahasiswa Universitas Indonesia yang memimpin unjuk rasa tersebut dan akhirnya dijebloskan ke penjara oleh pemerintah Orde Baru."
+    }
+  },
+  {
+    "event_card": {
+      "id": "evt-14",
+      "question": "Kapan militer Indonesia secara resmi melakukan invasi darat ke Timor Portugis (Timor Leste)?",
+      "displayDate": "7 Desember 1975",
+      "sortDate": 19751207,
+      "title": "Operasi Seroja",
+      "description": "Operasi militer darat, laut, dan udara terbesar dalam sejarah TNI untuk menguasai Dili di tengah kekosongan kekuasaan yang ditinggalkan Portugal."
+    },
+    "character_card": {
+      "id": "chr-14",
+      "name": "Mayjen L.B. Moerdani (Benny Moerdani)",
+      "description": "Tokoh intelijen militer kunci yang merancang dan mengatur jalannya invasi ke Timor Portugis atas persetujuan diam-diam dari Amerika Serikat."
+    }
+  },
+  {
+    "event_card": {
+      "id": "evt-15",
+      "question": "Kapan penembakan mahasiswa di Universitas Trisakti yang memicu kerusuhan massal Mei terjadi?",
+      "displayDate": "12 Mei 1998",
+      "sortDate": 19980512,
+      "title": "Tragedi Trisakti",
+      "description": "Tewasnya empat mahasiswa Trisakti akibat tembakan peluru tajam aparat saat berdemonstrasi menuntut Soeharto turun dari jabatannya di tengah krisis moneter."
+    },
+    "character_card": {
+      "id": "chr-15",
+      "name": "Elang Mulia Lesmana",
+      "description": "Salah satu dari empat pahlawan reformasi dari Universitas Trisakti yang gugur tertembak dalam perjuangan menumbangkan diktator."
+    }
+  },
+  {
+    "event_card": {
+      "id": "evt-16",
+      "question": "Kapan Presiden Soeharto secara resmi membacakan pidato pengunduran dirinya, mengakhiri 32 tahun Orde Baru?",
+      "displayDate": "21 Mei 1998",
+      "sortDate": 19980521,
+      "title": "Lengsernya Soeharto & Awal Reformasi",
+      "description": "Peristiwa bersejarah di Istana Merdeka di mana Soeharto menyatakan berhenti, disusul pelantikan wakilnya sebagai presiden baru yang menandai awal era Reformasi."
+    },
+    "character_card": {
+      "id": "chr-16",
+      "name": "B.J. Habibie",
+      "description": "Wakil Presiden yang secara konstitusional langsung mengambil sumpah jabatan menjadi Presiden ke-3 RI pada hari yang sama."
+    }
+  },
+  {
+    "event_card": {
+      "id": "evt-17",
+      "question": "Kapan pelaksanaan jajak pendapat (referendum) yang berujung pada lepasnya Timor Timur dari Indonesia?",
+      "displayDate": "30 Agustus 1999",
+      "sortDate": 19990830,
+      "title": "Referendum Timor Timur",
+      "description": "Pemungutan suara yang difasilitasi PBB (UNAMET) di mana mayoritas mutlak rakyat Timor Timur memilih menolak otonomi khusus dan memilih merdeka penuh."
+    },
+    "character_card": {
+      "id": "chr-17",
+      "name": "Xanana Gusmão",
+      "description": "Pemimpin gerilyawan Fretilin yang ditahan oleh Indonesia namun memimpin pergerakan kemerdekaan dari balik penjara hingga menjadi Presiden pertama Timor Leste."
+    }
+  },
+  {
+    "event_card": {
+      "id": "evt-18",
+      "question": "Kapan pengesahan Amandemen Pertama UUD 1945 yang membatasi kekuasaan Presiden ditetapkan?",
+      "displayDate": "19 Oktober 1999",
+      "sortDate": 19991019,
+      "title": "Amandemen Pertama UUD 1945",
+      "description": "Langkah hukum paling fundamental di era Reformasi yang disahkan melalui Sidang Umum MPR untuk membatasi masa jabatan presiden maksimal 2 periode (10 tahun)."
+    },
+    "character_card": {
+      "id": "chr-18",
+      "name": "Amien Rais",
+      "description": "Ketua MPR RI hasil Pemilu 1999 sekaligus tokoh utama Reformasi yang memimpin jalannya sidang-sidang krusial perombakan konstitusi negara."
+    }
+  }
+]

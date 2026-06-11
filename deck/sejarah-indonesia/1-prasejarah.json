@@ -1,0 +1,272 @@
+[
+  {
+    "event_card": {
+      "id": "evt-01",
+      "question": "Kapan dimulainya Zaman Arkaikum (Azoikum) sebagai fase paling awal pembentukan bumi?",
+      "displayDate": "2.500 Juta Tahun Lalu",
+      "sortDate": -2500000000,
+      "title": "Zaman Arkaikum",
+      "description": "Masa pembentukan awal kerak bumi. Pada zaman ini, suhu bumi masih sangat panas dan belum ditemukan tanda-tanda kehidupan apa pun."
+    },
+    "character_card": {
+      "id": "chr-01",
+      "name": "Ahli Geologi & Paleontologi",
+      "description": "Para ilmuwan yang meneliti komposisi batuan bumi tertua untuk memetakan masa ketika bumi belum memiliki kehidupan."
+    }
+  },
+  {
+    "event_card": {
+      "id": "evt-02",
+      "question": "Kapan makhluk hidup bersel satu dan invertebrata mulai bermunculan di bumi?",
+      "displayDate": "541 Juta Tahun Lalu",
+      "sortDate": -541000000,
+      "title": "Zaman Paleozoikum",
+      "description": "Dikenal juga sebagai zaman kehidupan tua. Mikroorganisme, ikan tanpa rahang, hingga amfibi mulai mendiami lautan dan daratan dangkal."
+    },
+    "character_card": {
+      "id": "chr-02",
+      "name": "Trilobita (Fosil Pandu)",
+      "description": "Organisme laut purba yang menjadi fosil indeks utama bagi para ahli untuk mengidentifikasi lapisan sedimen masa Paleozoikum."
+    }
+  },
+  {
+    "event_card": {
+      "id": "evt-03",
+      "question": "Kapan bumi dikuasai oleh reptil-reptil raksasa dan dinosaurus?",
+      "displayDate": "252 Juta Tahun Lalu",
+      "sortDate": -252000000,
+      "title": "Zaman Mesozoikum",
+      "description": "Sering disebut zaman reptil. Daratan menyatu menjadi Pangea dan dinosaurus berkembang pesat menguasai daratan, laut, maupun udara."
+    },
+    "character_card": {
+      "id": "chr-03",
+      "name": "Dinosaurus",
+      "description": "Kelompok reptil purba raksasa yang mendominasi kehidupan di daratan bumi selama zaman Mesozoikum."
+    }
+  },
+  {
+    "event_card": {
+      "id": "evt-04",
+      "question": "Kapan dinosaurus punah dan mamalia mulai berkembang pesat di bumi?",
+      "displayDate": "66 Juta Tahun Lalu",
+      "sortDate": -66000000,
+      "title": "Zaman Neozoikum (Tersier)",
+      "description": "Setelah kepunahan massal dinosaurus, mamalia purba berevolusi menjadi beragam spesies dan mulai menyebar ke seluruh penjuru benua."
+    },
+    "character_card": {
+      "id": "chr-04",
+      "name": "Mamalia Purba",
+      "description": "Kelompok hewan menyusui yang beradaptasi dengan cepat dan mendominasi rantai makanan setelah era reptil raksasa berakhir."
+    }
+  },
+  {
+    "event_card": {
+      "id": "evt-05",
+      "question": "Kapan manusia purba raksasa Meganthropus paleojavanicus diperkirakan hidup di Pulau Jawa?",
+      "displayDate": "1,9 Juta Tahun Lalu",
+      "sortDate": -1900000,
+      "title": "Kehidupan Meganthropus paleojavanicus",
+      "description": "Manusia purba tertua di Pulau Jawa yang memiliki ciri rahang dan tulang yang besar serta kuat, hidup dengan cara mengumpulkan makanan."
+    },
+    "character_card": {
+      "id": "chr-05",
+      "name": "G.H.R. von Koenigswald",
+      "description": "Ahli paleontologi yang menemukan fosil Meganthropus paleojavanicus di kawasan Sangiran pada tahun 1941."
+    }
+  },
+  {
+    "event_card": {
+      "id": "evt-06",
+      "question": "Kapan manusia kera berjalan tegak (Pithecanthropus erectus) mulai mendiami Nusantara?",
+      "displayDate": "1,5 Juta Tahun Lalu",
+      "sortDate": -1500000,
+      "title": "Kehidupan Pithecanthropus erectus",
+      "description": "Manusia purba yang mampu berjalan tegak. Mereka memproduksi alat batu sederhana dan menjadi penemuan fosil purba paling populer dari Jawa."
+    },
+    "character_card": {
+      "id": "chr-06",
+      "name": "Eugene Dubois",
+      "description": "Dokter dan peneliti asal Belanda yang menemukan fosil Pithecanthropus di Trinil, Ngawi pada tahun 1891."
+    }
+  },
+  {
+    "event_card": {
+      "id": "evt-07",
+      "question": "Kapan manusia purba dari lembah Bengawan Solo (Homo soloensis) bertahan hidup?",
+      "displayDate": "900 Ribu Tahun Lalu",
+      "sortDate": -900000,
+      "title": "Eksistensi Homo soloensis",
+      "description": "Manusia purba yang lebih maju secara morfologi di Pulau Jawa, fosilnya banyak ditemukan di endapan teras Sungai Bengawan Solo, Ngandong."
+    },
+    "character_card": {
+      "id": "chr-07",
+      "name": "Ter Haar & W.F.F. Oppenoorth",
+      "description": "Dua peneliti yang berjasa menemukan tengkorak-tengkorak Homo soloensis di Ngandong pada kisaran tahun 1931-1933."
+    }
+  },
+  {
+    "event_card": {
+      "id": "evt-08",
+      "question": "Kapan kebudayaan perkakas batu pertama berupa kapak perimbas (Paleolitikum) muncul di Nusantara?",
+      "displayDate": "500 Ribu Tahun Lalu",
+      "sortDate": -500000,
+      "title": "Kebudayaan Pacitan (Paleolitikum)",
+      "description": "Munculnya alat-alat perkakas dari batu yang masih sangat kasar, seperti kapak perimbas (chopper) untuk keperluan memotong dan menumbuk."
+    },
+    "character_card": {
+      "id": "chr-08",
+      "name": "Manusia Purba Pembuat Alat",
+      "description": "Kelompok Pithecanthropus yang menciptakan teknologi perkakas batu kasar di Sungai Baksoko, Pacitan."
+    }
+  },
+  {
+    "event_card": {
+      "id": "evt-09",
+      "question": "Kapan 'Manusia Hobbit' berukuran kerdil terisolasi di Kepulauan Nusa Tenggara?",
+      "displayDate": "190 Ribu Tahun Lalu",
+      "sortDate": -190000,
+      "title": "Era Homo floresiensis",
+      "description": "Penemuan kerangka manusia kerdil yang memicu perdebatan dunia, hidup terisolasi di dalam gua-gua Pulau Flores dengan gajah endemik kerdil."
+    },
+    "character_card": {
+      "id": "chr-09",
+      "name": "Prof. Raden Pandji Soejono & Mike Morwood",
+      "description": "Arkeolog gabungan Indonesia dan Australia yang mengungkap keberadaan fosil 'Hobbit' di Gua Liang Bua pada tahun 2003."
+    }
+  },
+  {
+    "event_card": {
+      "id": "evt-10",
+      "question": "Kapan Homo sapiens modern awal mulai bermigrasi dan menempati Nusantara?",
+      "displayDate": "60 Ribu Tahun Lalu",
+      "sortDate": -60000,
+      "title": "Migrasi Homo Sapiens",
+      "description": "Manusia modern anatomis yang mulai bermigrasi ke kepulauan Nusantara, membawa kecerdasan yang lebih tinggi dan budaya yang lebih maju."
+    },
+    "character_card": {
+      "id": "chr-10",
+      "name": "Penjelajah Purba Nusantara",
+      "description": "Gelombang pertama manusia berjenis Homo sapiens yang menyeberangi jalur darat dan perairan dangkal menuju Paparan Sahul dan Sunda."
+    }
+  },
+  {
+    "event_card": {
+      "id": "evt-11",
+      "question": "Kapan fosil Homo wajakensis beraktivitas di daerah Tulungagung, Jawa Timur?",
+      "displayDate": "40 Ribu Tahun Lalu",
+      "sortDate": -40000,
+      "title": "Kehidupan Homo wajakensis",
+      "description": "Fosil manusia purba dari jenis Homo sapiens pertama yang dilaporkan ditemukan di Indonesia, memiliki kemiripan dengan bangsa Australoid purba."
+    },
+    "character_card": {
+      "id": "chr-11",
+      "name": "B.D. van Rietschoten",
+      "description": "Insinyur pertambangan yang menemukan fosil tengkorak Wajak saat sedang mencari marmer di Campurdarat, Tulungagung tahun 1889."
+    }
+  },
+  {
+    "event_card": {
+      "id": "evt-12",
+      "question": "Kapan manusia purba mulai hidup semi-menetap dan meninggalkan bukit kerang (Kjokkenmoddinger)?",
+      "displayDate": "10 Ribu Tahun Lalu",
+      "sortDate": -10000,
+      "title": "Kebudayaan Kjokkenmoddinger (Mesolitikum)",
+      "description": "Budaya sampah dapur berupa tumpukan cangkang kerang dan siput yang menggunung tinggi di sepanjang pesisir timur Sumatera."
+    },
+    "character_card": {
+      "id": "chr-12",
+      "name": "P.V. van Stein Callenfels",
+      "description": "Dijuluki sebagai 'Bapak Prasejarah Indonesia', ia yang pertama kali meneliti bukit kerang ini pada tahun 1925."
+    }
+  },
+  {
+    "event_card": {
+      "id": "evt-13",
+      "question": "Kapan manusia mulai menjadikan gua payung sebagai tempat tinggal pelindung?",
+      "displayDate": "9 Ribu Tahun Lalu",
+      "sortDate": -9000,
+      "title": "Kebudayaan Abris Sous Roche",
+      "description": "Pola hunian manusia purba Zaman Mesolitikum yang berlindung di ceruk atau gua-gua tebing karang dari cuaca ekstrem dan binatang buas."
+    },
+    "character_card": {
+      "id": "chr-13",
+      "name": "H.R. van Heekeren",
+      "description": "Arkeolog yang meneliti peninggalan di gua-gua Sulawesi Selatan, termasuk menemukan jejak cap tangan purba di Leang-Leang."
+    }
+  },
+  {
+    "event_card": {
+      "id": "evt-14",
+      "question": "Kapan artefak dari tulang dan tanduk rusa banyak dimanfaatkan sebagai alat kehidupan?",
+      "displayDate": "8 Ribu Tahun Lalu",
+      "sortDate": -8000,
+      "title": "Kebudayaan Tulang Sampung (Sampung Bone Culture)",
+      "description": "Industri pembuatan alat dari tulang, tanduk, dan duri ikan yang ditemukan melimpah di Gua Lawa, Sampung, Ponorogo."
+    },
+    "character_card": {
+      "id": "chr-14",
+      "name": "Manusia Gua Lawa",
+      "description": "Komunitas prasejarah yang terampil memanfaatkan sisa-sisa tulang buruan mereka untuk dijadikan sudip, belati, dan ujung tombak."
+    }
+  },
+  {
+    "event_card": {
+      "id": "evt-15",
+      "question": "Kapan kedatangan Bangsa Proto Melayu yang membawa kebudayaan Batu Baru (Neolitikum)?",
+      "displayDate": "1500 SM",
+      "sortDate": -1500,
+      "title": "Migrasi Bangsa Proto Melayu",
+      "description": "Masuknya ras Austronesia tua ke Nusantara yang membawa revolusi besar berupa kebudayaan bercocok tanam dan alat batu halus (Kapak Persegi)."
+    },
+    "character_card": {
+      "id": "chr-15",
+      "name": "Bangsa Proto Melayu",
+      "description": "Para imigran purba penutur Austronesia yang berlayar dan menetap, menjadi nenek moyang suku-suku pedalaman di Indonesia."
+    }
+  },
+  {
+    "event_card": {
+      "id": "evt-16",
+      "question": "Kapan tradisi pendirian bangunan batu besar untuk pemujaan roh nenek moyang berkembang?",
+      "displayDate": "1000 SM",
+      "sortDate": -1000,
+      "title": "Zaman Megalitikum",
+      "description": "Masyarakat prasejarah mulai mendirikan struktur batu masif seperti menhir, dolmen, sarkofagus, dan punden berundak dengan kepercayaan animisme."
+    },
+    "character_card": {
+      "id": "chr-16",
+      "name": "Penduduk Megalitik Nusantara",
+      "description": "Masyarakat bercocok tanam yang terampil dalam memahat batu besar untuk kepentingan religi, ritual, dan penguburan."
+    }
+  },
+  {
+    "event_card": {
+      "id": "evt-17",
+      "question": "Kapan Bangsa Deutero Melayu masuk membawa kebudayaan logam ke Nusantara?",
+      "displayDate": "500 SM",
+      "sortDate": -500,
+      "title": "Kebudayaan Perunggu (Zaman Logam)",
+      "description": "Masa pengenalan teknik peleburan logam dengan cetakan (Bivalve & A Cire Perdue) yang menghasilkan Nekara, Kapak Corong, dan Candrasa."
+    },
+    "character_card": {
+      "id": "chr-17",
+      "name": "Bangsa Deutero Melayu",
+      "description": "Imigran Melayu Muda dari wilayah Dongson, Vietnam yang membawa kepiawaian dalam bidang maritim dan metalurgi perunggu ke Indonesia."
+    }
+  },
+  {
+    "event_card": {
+      "id": "evt-18",
+      "question": "Kapan berakhinya zaman prasejarah di Indonesia dengan ditemukannya bukti tertulis?",
+      "displayDate": "Abad ke-4 Masehi",
+      "sortDate": 400,
+      "title": "Batas Akhir Prasejarah (Prasasti Yupa)",
+      "description": "Penemuan 7 tiang batu (Yupa) bertuliskan aksara Pallawa dan bahasa Sanskerta di Kutai, menandai masuknya Nusantara ke zaman sejarah."
+    },
+    "character_card": {
+      "id": "chr-18",
+      "name": "Maharaja Mulawarman",
+      "description": "Raja Kutai Martadipura yang menitahkan penulisan prasasti Yupa, tokoh yang menjembatani akhir masa prasejarah Nusantara."
+    }
+  }
+]

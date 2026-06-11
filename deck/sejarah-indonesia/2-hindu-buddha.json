@@ -1,0 +1,272 @@
+[
+  {
+    "event_card": {
+      "id": "evt-01",
+      "question": "Kapan prasasti Yupa dibuat sebagai penanda awal masuknya pengaruh kebudayaan Hindu di Nusantara?",
+      "displayDate": "Abad ke-4 Masehi",
+      "sortDate": 4000101,
+      "title": "Berdirinya Kerajaan Kutai Martadipura",
+      "description": "Kerajaan Hindu tertua di Indonesia yang dibuktikan dengan penemuan tujuh tiang batu (Yupa) bertuliskan huruf Pallawa dan bahasa Sanskerta di Kalimantan Timur."
+    },
+    "character_card": {
+      "id": "chr-01",
+      "name": "Raja Mulawarman",
+      "description": "Raja terbesar Kutai Martadipura yang memberikan sedekah 20.000 ekor lembu kepada para Brahmana, sebagaimana dicatat dalam prasasti Yupa."
+    }
+  },
+  {
+    "event_card": {
+      "id": "evt-02",
+      "question": "Kapan Kerajaan Tarumanagara membangun saluran air Gomati sepanjang 11 km?",
+      "displayDate": "Abad ke-5 Masehi",
+      "sortDate": 4500101,
+      "title": "Pembangunan Saluran Gomati Tarumanagara",
+      "description": "Penggalian Sungai Gomati dan Candrabaga di Jawa Barat untuk mencegah banjir dan sarana irigasi pertanian yang tercatat pada Prasasti Tugu."
+    },
+    "character_card": {
+      "id": "chr-02",
+      "name": "Raja Purnawarman",
+      "description": "Raja Tarumanagara yang gagah berani, yang telapak kakinya disamakan dengan telapak kaki Dewa Wisnu pada Prasasti Ciaruteun."
+    }
+  },
+  {
+    "event_card": {
+      "id": "evt-03",
+      "question": "Kapan Ratu Shima mulai memerintah Kerajaan Kalingga dengan penegakan hukum yang sangat tegas?",
+      "displayDate": "674 Masehi",
+      "sortDate": 6740101,
+      "title": "Pemerintahan Ratu Shima di Kalingga",
+      "description": "Kerajaan Kalingga (Holing) di pesisir utara Jawa Tengah mencapai masa kejayaan karena penegakan hukum potong tangan bagi pencuri yang menciptakan keadilan sosial."
+    },
+    "character_card": {
+      "id": "chr-03",
+      "name": "Ratu Shima",
+      "description": "Penguasa perempuan Kalingga yang legendaris karena ketegasan, kejujuran, dan keadilannya yang tanpa pandang bulu terhadap siapa pun."
+    }
+  },
+  {
+    "event_card": {
+      "id": "evt-04",
+      "question": "Kapan Dapunta Hyang Sri Jayanasa melakukan perjalanan suci (Siddhayatra) yang menandai berdirinya Sriwijaya?",
+      "displayDate": "16 Juni 682 Masehi",
+      "sortDate": 6820616,
+      "title": "Ekspedisi Siddhayatra Sriwijaya",
+      "description": "Dapunta Hyang membawa 20.000 tentara berangkat dari Minanga Tamwan untuk menaklukkan wilayah, dicatat secara presisi pada Prasasti Kedukan Bukit."
+    },
+    "character_card": {
+      "id": "chr-04",
+      "name": "Dapunta Hyang Sri Jayanasa",
+      "description": "Pendiri sekaligus maharaja pertama kemaharajaan maritim Sriwijaya yang berpusat di tepian Sungai Musi, Palembang."
+    }
+  },
+  {
+    "event_card": {
+      "id": "evt-05",
+      "question": "Kapan peresmian pendirian Lingga di Desa Canggal yang menandai berdirinya Kerajaan Mataram Kuno?",
+      "displayDate": "6 Oktober 732 Masehi",
+      "sortDate": 7321006,
+      "title": "Pendirian Kerajaan Medang (Mataram Kuno)",
+      "description": "Prasasti Canggal yang berangka tahun 654 Saka merinci upacara pendirian sebuah lingga Siwa di Bukit Stirangga sebagai simbol legitimasi kekuasaan baru."
+    },
+    "character_card": {
+      "id": "chr-05",
+      "name": "Rakai Mataram Sang Ratu Sanjaya",
+      "description": "Pendiri Wangsa Sanjaya di Mataram Kuno yang menganut agama Hindu aliran Siwa dan digambarkan sebagai penakluk yang gagah."
+    }
+  },
+  {
+    "event_card": {
+      "id": "evt-06",
+      "question": "Kapan penyelesaian pembangunan Candi Borobudur sebagai monumen Buddha Mahayana terbesar di dunia?",
+      "displayDate": "825 Masehi",
+      "sortDate": 8250101,
+      "title": "Penyelesaian Candi Borobudur",
+      "description": "Puncak pembangunan mahakarya arsitektur Wangsa Syailendra di dataran Kedu, Jawa Tengah, yang difungsikan sebagai tempat suci pemujaan Buddha."
+    },
+    "character_card": {
+      "id": "chr-06",
+      "name": "Raja Samaratungga",
+      "description": "Penguasa Mataram Kuno dari Wangsa Syailendra yang merampungkan proyek raksasa pembangunan Candi Borobudur."
+    }
+  },
+  {
+    "event_card": {
+      "id": "evt-07",
+      "question": "Kapan kompleks Candi Prambanan (Candi Siwagrha) pertama kali diresmikan?",
+      "displayDate": "12 November 856 Masehi",
+      "sortDate": 8561112,
+      "title": "Peresmian Candi Prambanan",
+      "description": "Diresmikan tepat pada tanggal Margasira menurut penanggalan Prasasti Siwagrha, dibangun sebagai gugusan candi tandingan untuk memuliakan Dewa Siwa."
+    },
+    "character_card": {
+      "id": "chr-07",
+      "name": "Rakai Pikatan",
+      "description": "Raja dari Wangsa Sanjaya yang memprakarsai pembangunan Candi Prambanan sekaligus menandai kembalinya supremasi Hindu di Jawa Tengah."
+    }
+  },
+  {
+    "event_card": {
+      "id": "evt-08",
+      "question": "Kapan ibu kota Kerajaan Mataram Kuno dipindahkan dari Jawa Tengah ke Jawa Timur (Medang Kamulan)?",
+      "displayDate": "937 Masehi",
+      "sortDate": 9370101,
+      "title": "Pendirian Wangsa Isyana di Jawa Timur",
+      "description": "Pusat pemerintahan dipindahkan akibat letusan dahsyat Gunung Merapi. Peristiwa ini diperingati dengan monumen Jayastambha pada Prasasti Anjuk Ladang."
+    },
+    "character_card": {
+      "id": "chr-08",
+      "name": "Mpu Sindok",
+      "description": "Raja pertama Wangsa Isyana yang menyelamatkan keberlangsungan Kerajaan Medang dengan memindahkannya ke lembah Sungai Brantas."
+    }
+  },
+  {
+    "event_card": {
+      "id": "evt-09",
+      "question": "Kapan Raja Airlangga membelah kerajaannya menjadi Kerajaan Janggala dan Panjalu (Kadiri)?",
+      "displayDate": "1042 Masehi",
+      "sortDate": 10420101,
+      "title": "Pembagian Kerajaan Kahuripan",
+      "description": "Untuk menghindari perang saudara perebutan takhta, Airlangga menugaskan Mpu Bharada untuk membagi batas wilayah kerajaannya menjadi dua."
+    },
+    "character_card": {
+      "id": "chr-09",
+      "name": "Prabu Airlangga",
+      "description": "Raja agung yang berhasil menyatukan kembali kepingan Nusantara setelah peristiwa pralaya (kehancuran) Raja Dharmawangsa."
+    }
+  },
+  {
+    "event_card": {
+      "id": "evt-10",
+      "question": "Kapan masa keemasan Kerajaan Kadiri yang ditandai dengan selesainya penulisan Kakawin Bharatayuddha?",
+      "displayDate": "6 September 1157 Masehi",
+      "sortDate": 11570906,
+      "title": "Puncak Kejayaan Kerajaan Kadiri",
+      "description": "Masa di mana sastra berkembang sangat pesat. Kitab Bharatayuddha diselesaikan untuk melegitimasi kemenangan Kadiri atas Janggala."
+    },
+    "character_card": {
+      "id": "chr-10",
+      "name": "Sri Jayabaya",
+      "description": "Raja Kadiri yang paling terkenal dengan ramalannya (Jangka Jayabaya) dan membawa kerajaannya pada puncak keemasan."
+    }
+  },
+  {
+    "event_card": {
+      "id": "evt-11",
+      "question": "Kapan Pertempuran Ganter terjadi, yang mengakhiri riwayat Kadiri dan mengawali Kerajaan Singhasari?",
+      "displayDate": "1222 Masehi",
+      "sortDate": 12220101,
+      "title": "Pertempuran Ganter",
+      "description": "Pemberontakan Tumapel dengan dukungan kaum Brahmana yang berhasil mengalahkan Kertajaya (Raja Kadiri terakhir) di wilayah Ganter."
+    },
+    "character_card": {
+      "id": "chr-11",
+      "name": "Ken Arok",
+      "description": "Pendiri Kerajaan Singhasari (Wangsa Rajasa) yang mengawali kariernya dengan merebut takhta Tunggul Ametung menggunakan keris Mpu Gandring."
+    }
+  },
+  {
+    "event_card": {
+      "id": "evt-12",
+      "question": "Kapan Ekspedisi Pamalayu diluncurkan oleh Kerajaan Singhasari menuju Pulau Sumatra?",
+      "displayDate": "1275 Masehi",
+      "sortDate": 12750101,
+      "title": "Ekspedisi Pamalayu Singhasari",
+      "description": "Invasi damai militer dan diplomasi untuk menjalin persekutuan dengan Kerajaan Dharmasraya demi membendung ancaman Kekaisaran Mongol."
+    },
+    "character_card": {
+      "id": "chr-12",
+      "name": "Raja Kertanegara",
+      "description": "Raja terakhir dan terbesar Singhasari yang memiliki cita-cita politik luar negeri (Cakrawala Mandala Dwipantara) untuk menyatukan Nusantara."
+    }
+  },
+  {
+    "event_card": {
+      "id": "evt-13",
+      "question": "Kapan penobatan resmi pendiri Kerajaan Majapahit setelah berhasil mengusir pasukan Mongol?",
+      "displayDate": "10 November 1293 Masehi",
+      "sortDate": 12931110,
+      "title": "Berdirinya Kemaharajaan Majapahit",
+      "description": "Tanggal penobatan pada tanggal 15 bulan Kartika tahun 1215 Saka yang disepakati secara historis sebagai hari lahirnya Majapahit."
+    },
+    "character_card": {
+      "id": "chr-13",
+      "name": "Raden Wijaya (Kertarajasa Jayawardhana)",
+      "description": "Pendiri Majapahit yang sangat taktis memanfaatkan tentara Tartar/Mongol untuk menghancurkan musuhnya, lalu mengusir mereka dari Pulau Jawa."
+    }
+  },
+  {
+    "event_card": {
+      "id": "evt-14",
+      "question": "Kapan Sumpah Palapa diucapkan sebagai deklarasi geopolitik penyatuan Nusantara?",
+      "displayDate": "1336 Masehi",
+      "sortDate": 13360101,
+      "title": "Deklarasi Sumpah Palapa",
+      "description": "Sumpah sakti yang diucapkan pada upacara pelantikan Mahapatih Amangkubhumi. Berisi sumpah pantang bersenang-senang sebelum menaklukkan pulau-pulau seberang."
+    },
+    "character_card": {
+      "id": "chr-14",
+      "name": "Gajah Mada",
+      "description": "Mahapatih terhebat Majapahit yang menjadi otak militer dan arsitek utama di balik ekspansi wilayah secara besar-besaran."
+    }
+  },
+  {
+    "event_card": {
+      "id": "evt-15",
+      "question": "Kapan tragedi berdarah Perang Bubat meletus antara Majapahit dan Kerajaan Sunda?",
+      "displayDate": "1357 Masehi",
+      "sortDate": 13570101,
+      "title": "Tragedi Perang Bubat",
+      "description": "Bentrokan di pesanggrahan Bubat karena kesalahpahaman motif politik Gajah Mada dalam menyikapi rencana pernikahan silang antara raja Majapahit dan putri Sunda."
+    },
+    "character_card": {
+      "id": "chr-15",
+      "name": "Dyah Pitaloka Citraresmi",
+      "description": "Putri mahkota Kerajaan Sunda yang akhirnya memilih mati bunuh diri demi mempertahankan harga diri dan kehormatan kerajaannya di Lapangan Bubat."
+    }
+  },
+  {
+    "event_card": {
+      "id": "evt-16",
+      "question": "Kapan Kakawin Nagarakretagama (Desawarnana) yang memuat pujian kejayaan Majapahit selesai digubah?",
+      "displayDate": "1365 Masehi",
+      "sortDate": 13650101,
+      "title": "Penyelesaian Kakawin Nagarakretagama",
+      "description": "Manuskrip sejarah Jawa Kuno yang paling terperinci mendeskripsikan tata negara, birokrasi, daftar wilayah jajahan, dan perjalanan dinas keliling raja."
+    },
+    "character_card": {
+      "id": "chr-16",
+      "name": "Mpu Prapanca",
+      "description": "Pujangga istana dan mantan Dharmadyaksa Kasogatan (kepala urusan agama Buddha) yang menjadi saksi mata kebesaran Majapahit."
+    }
+  },
+  {
+    "event_card": {
+      "id": "evt-17",
+      "question": "Kapan meletusnya Perang Paregreg yang menjadi awal dari kejatuhan fatal internal Kerajaan Majapahit?",
+      "displayDate": "1404 Masehi",
+      "sortDate": 14040101,
+      "title": "Perang Paregreg (Perang Saudara Majapahit)",
+      "description": "Konflik perebutan suksesi yang berujung pada perang saudara panjang antara keraton barat dan keraton timur, menguras kekuatan militer kerajaan."
+    },
+    "character_card": {
+      "id": "chr-17",
+      "name": "Wikramawardhana",
+      "description": "Raja Majapahit penerus takhta Hayam Wuruk yang memimpin keraton barat dan berhasil memadamkan pemberontakan keraton timur pimpinan Bhre Wirabhumi."
+    }
+  },
+  {
+    "event_card": {
+      "id": "evt-18",
+      "question": "Kapan tanda keruntuhan ibu kota Kerajaan Majapahit (Sirna Ilang Kertaning Bumi) terjadi?",
+      "displayDate": "1478 Masehi",
+      "sortDate": 14780101,
+      "title": "Keruntuhan Keraton Majapahit",
+      "description": "Peristiwa jatuhnya ibu kota Majapahit akibat kudeta internal oleh Girindrawardhana. Candrasengkala ini melambangkan akhir hegemoni Hindu-Buddha yang tak lama kemudian disusul penyebaran pengaruh Islam."
+    },
+    "character_card": {
+      "id": "chr-18",
+      "name": "Prabu Brawijaya V",
+      "description": "Identitas tokoh legendaris yang dikisahkan dalam babad sebagai penguasa agung terakhir Majapahit sebelum istananya runtuh."
+    }
+  }
+]

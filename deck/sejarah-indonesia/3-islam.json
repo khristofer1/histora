@@ -1,0 +1,272 @@
+[
+  {
+    "event_card": {
+      "id": "evt-01",
+      "question": "Kapan wafatnya pendiri Kesultanan Samudera Pasai yang batu nisannya menjadi bukti awal berdirinya kerajaan Islam ini?",
+      "displayDate": "Tahun 1297 (Ramadhan 696 H)",
+      "sortDate": 12970101,
+      "title": "Wafatnya Sultan Malik as-Saleh",
+      "description": "Batu nisan Sultan Malik as-Saleh (Marah Silu) di Aceh Utara menjadi bukti epigrafis tertua berdirinya Kesultanan Samudera Pasai sebagai pusat studi Islam awal di Nusantara."
+    },
+    "character_card": {
+      "id": "chr-01",
+      "name": "Sultan Malik as-Saleh",
+      "description": "Pendiri sekaligus raja pertama Kesultanan Samudera Pasai yang menyatukan wilayah Pasai dan Peureulak."
+    }
+  },
+  {
+    "event_card": {
+      "id": "evt-02",
+      "question": "Kapan Kesultanan Cirebon secara resmi memerdekakan diri dan berhenti mengirim upeti ke Pajajaran?",
+      "displayDate": "2 April 1482",
+      "sortDate": 14820402,
+      "title": "Kemerdekaan Kesultanan Cirebon",
+      "description": "Peristiwa dikirimkannya surat pemutusan hubungan upeti (garam trasi) dari Cirebon ke Kerajaan Pajajaran. Tanggal ini kemudian ditetapkan sebagai Hari Jadi Kabupaten Cirebon."
+    },
+    "character_card": {
+      "id": "chr-02",
+      "name": "Sunan Gunung Jati (Syarif Hidayatullah)",
+      "description": "Salah satu Wali Songo yang menjadi Sultan Cirebon, menjadikan wilayahnya sebagai pusat penyebaran Islam di Jawa Barat."
+    }
+  },
+  {
+    "event_card": {
+      "id": "evt-03",
+      "question": "Kapan pusat perdagangan maritim Kesultanan Malaka jatuh ke tangan armada Portugis?",
+      "displayDate": "24 Agustus 1511",
+      "sortDate": 15110824,
+      "title": "Jatuhnya Kesultanan Malaka",
+      "description": "Armada Portugis pimpinan Afonso de Albuquerque berhasil menaklukkan ibu kota Malaka setelah pengepungan selama sebulan, memaksa sultan menyingkir ke Johor."
+    },
+    "character_card": {
+      "id": "chr-03",
+      "name": "Sultan Mahmud Syah",
+      "description": "Sultan Malaka terakhir yang gigih melawan invasi Portugis dan mendirikan basis perlawanan baru pasca keruntuhan kerajaannya."
+    }
+  },
+  {
+    "event_card": {
+      "id": "evt-04",
+      "question": "Kapan armada Kesultanan Demak melancarkan serangan besar pertama untuk mengusir Portugis dari Malaka?",
+      "displayDate": "Tahun 1513",
+      "sortDate": 15130101,
+      "title": "Ekspedisi Jihad Demak ke Malaka",
+      "description": "Pengiriman armada besar yang terdiri dari sekitar 100 kapal dan ribuan prajurit Jawa untuk membebaskan jalur perdagangan Selat Malaka dari monopoli Portugis."
+    },
+    "character_card": {
+      "id": "chr-04",
+      "name": "Pati Unus (Pangeran Sabrang Lor)",
+      "description": "Panglima armada Kesultanan Demak yang sangat ditakuti Portugis karena keberaniannya menyeberangi Laut Jawa untuk menyerang Malaka."
+    }
+  },
+  {
+    "event_card": {
+      "id": "evt-05",
+      "question": "Kapan raja Banjar pertama kali memeluk agama Islam yang menandai berdirinya Kesultanan Banjar?",
+      "displayDate": "24 September 1526",
+      "sortDate": 15260924,
+      "title": "Berdirinya Kesultanan Banjar",
+      "description": "Pangeran Samudera memeluk Islam dengan bimbingan Khatib Dayan dari Demak setelah memenangkan perang tahta. Tanggal ini dirayakan sebagai Hari Jadi Kota Banjarmasin."
+    },
+    "character_card": {
+      "id": "chr-05",
+      "name": "Sultan Suriansyah (Pangeran Samudera)",
+      "description": "Raja pertama Kesultanan Banjar di Kalimantan Selatan yang membawa kerajaannya bertransisi menjadi kerajaan Islam."
+    }
+  },
+  {
+    "event_card": {
+      "id": "evt-06",
+      "question": "Kapan Pelabuhan Sunda Kelapa berhasil direbut dan diubah namanya menjadi Jayakarta?",
+      "displayDate": "22 Juni 1527",
+      "sortDate": 15270622,
+      "title": "Penaklukan Sunda Kelapa",
+      "description": "Pasukan gabungan Demak dan Cirebon berhasil mengusir Portugis dari Sunda Kelapa. Nama pelabuhan diganti menjadi Jayakarta (Kota Kemenangan), yang kini dirayakan sebagai HUT Kota Jakarta."
+    },
+    "character_card": {
+      "id": "chr-06",
+      "name": "Fatahillah",
+      "description": "Panglima perang cerdas dari Pasai yang memimpin armada gabungan Islam menaklukkan Sunda Kelapa dan mendirikan Jayakarta."
+    }
+  },
+  {
+    "event_card": {
+      "id": "evt-07",
+      "question": "Kapan Kesultanan Ternate berhasil mengusir Portugis secara total dari Kepulauan Maluku?",
+      "displayDate": "15 Juli 1575",
+      "sortDate": 15750715,
+      "title": "Pengusiran Portugis dari Ternate",
+      "description": "Setelah pengepungan Benteng Sao Paulo selama lima tahun akibat pembunuhan Sultan Khairun, Portugis akhirnya menyerah tanpa syarat dan diusir dari Ternate."
+    },
+    "character_card": {
+      "id": "chr-07",
+      "name": "Sultan Baabullah",
+      "description": "Dijuluki 'Penguasa 72 Pulau', sultan agung Ternate yang membalas dendam kematian ayahnya dengan mengusir Portugis dan membawa Ternate ke puncak kejayaan."
+    }
+  },
+  {
+    "event_card": {
+      "id": "evt-08",
+      "question": "Kapan Sultan Iskandar Muda naik takhta dan membawa Kesultanan Aceh Darussalam ke era keemasannya?",
+      "displayDate": "Tahun 1607",
+      "sortDate": 16070101,
+      "title": "Puncak Kejayaan Aceh Darussalam",
+      "description": "Dimulainya masa pemerintahan di mana Aceh menjadi kekuatan militer dan ekonomi maritim terbesar di Selat Malaka, mendominasi perdagangan lada Nusantara."
+    },
+    "character_card": {
+      "id": "chr-08",
+      "name": "Sultan Iskandar Muda",
+      "description": "Pemimpin terhebat Kesultanan Aceh yang menyusun undang-undang 'Adat Meukuta Alam' dan sangat tegas dalam menegakkan hukum Islam."
+    }
+  },
+  {
+    "event_card": {
+      "id": "evt-09",
+      "question": "Kapan Kesultanan Mataram Islam melancarkan serangan besar pertamanya ke markas VOC di Batavia?",
+      "displayDate": "22 Agustus 1628",
+      "sortDate": 16280822,
+      "title": "Serangan Mataram ke Batavia (Pertama)",
+      "description": "Armada laut Mataram di bawah pimpinan Tumenggung Bahureksa tiba di teluk Jakarta untuk memulai pengepungan militer pertama terhadap Benteng Batavia."
+    },
+    "character_card": {
+      "id": "chr-09",
+      "name": "Sultan Agung Hanyakrakusuma",
+      "description": "Raja terbesar Mataram Islam yang bercita-cita menyatukan Pulau Jawa dan mengusir penjajah VOC dari Nusantara."
+    }
+  },
+  {
+    "event_card": {
+      "id": "evt-10",
+      "question": "Kapan Perjanjian Bongaya ditandatangani, yang mengakhiri Perang Makassar secara sepihak?",
+      "displayDate": "18 November 1667",
+      "sortDate": 16671118,
+      "title": "Perjanjian Bongaya",
+      "description": "Kesultanan Gowa-Tallo terpaksa menandatangani perjanjian damai yang sangat merugikan setelah digempur habis-habisan oleh armada VOC pimpinan Cornelis Speelman."
+    },
+    "character_card": {
+      "id": "chr-10",
+      "name": "Sultan Hasanuddin",
+      "description": "Raja Gowa yang dijuluki 'Ayam Jantan dari Timur' oleh Belanda karena kegigihan dan keberaniannya dalam mempertahankan wilayah Makassar."
+    }
+  },
+  {
+    "event_card": {
+      "id": "evt-11",
+      "question": "Kapan Keraton Plered milik Kesultanan Mataram jatuh akibat pemberontakan besar dari Madura?",
+      "displayDate": "2 Juli 1677",
+      "sortDate": 16770702,
+      "title": "Jatuhnya Keraton Plered (Pemberontakan Trunajaya)",
+      "description": "Pasukan pemberontak berhasil menduduki istana Mataram di Plered, memaksa Raja Amangkurat I melarikan diri ke barat hingga wafat di Tegalwangi."
+    },
+    "character_card": {
+      "id": "chr-11",
+      "name": "Raden Trunajaya",
+      "description": "Bangsawan Madura yang memimpin perlawanan besar-besaran untuk meruntuhkan kekuasaan Amangkurat I yang dianggap tiran dan bersekutu dengan VOC."
+    }
+  },
+  {
+    "event_card": {
+      "id": "evt-12",
+      "question": "Kapan Kesultanan Mataram secara resmi terbelah menjadi dua akibat intervensi VOC?",
+      "displayDate": "13 Februari 1755",
+      "sortDate": 17550213,
+      "title": "Perjanjian Giyanti",
+      "description": "Traktat politik yang membagi wilayah Kesultanan Mataram menjadi Kasunanan Surakarta Hadiningrat dan Kasultanan Ngayogyakarta Hadiningrat."
+    },
+    "character_card": {
+      "id": "chr-12",
+      "name": "Sultan Hamengkubuwono I (Pangeran Mangkubumi)",
+      "description": "Pendiri dan raja pertama Kesultanan Yogyakarta yang sebelumnya memimpin perang gerilya hebat melawan VOC dan keraton Surakarta."
+    }
+  },
+  {
+    "event_card": {
+      "id": "evt-13",
+      "question": "Kapan Perjanjian Salatiga ditandatangani yang semakin memecah belah kekuatan Mataram?",
+      "displayDate": "17 Maret 1757",
+      "sortDate": 17570317,
+      "title": "Perjanjian Salatiga",
+      "description": "Kesepakatan yang menyerahkan sebagian wilayah Surakarta untuk membentuk kadipaten baru bernama Mangkunegaran demi meredam perang saudara."
+    },
+    "character_card": {
+      "id": "chr-13",
+      "name": "Raden Mas Said (Pangeran Sambernyawa)",
+      "description": "Panglima perang ulung yang tidak mau menyerah hingga akhirnya diakui kekuasaannya dan bergelar KGPAA Mangkunegara I."
+    }
+  },
+  {
+    "event_card": {
+      "id": "evt-14",
+      "question": "Kapan pasukan Tidore berhasil merebut kembali Benteng Oranje di Ternate dari tangan Belanda?",
+      "displayDate": "21 Juni 1801",
+      "sortDate": 18010621,
+      "title": "Kemenangan Sultan Nuku atas VOC",
+      "description": "Puncak dari perlawanan panjang 'Revolusi Tidore', di mana pasukan koalisi Nuku berhasil menundukkan kekuasaan Belanda di Ternate."
+    },
+    "character_card": {
+      "id": "chr-14",
+      "name": "Sultan Nuku (Muhammad Amiruddin)",
+      "description": "Sultan Tidore yang dijuluki 'Lord of Fortune' karena tidak pernah kalah perang dan brilian dalam diplomasi memanipulasi persaingan Inggris-Belanda."
+    }
+  },
+  {
+    "event_card": {
+      "id": "evt-15",
+      "question": "Kapan Perang Menteng meletus di Kesultanan Palembang Darussalam untuk mengusir Belanda?",
+      "displayDate": "12 Juni 1819",
+      "sortDate": 18190612,
+      "title": "Perang Menteng (Perang Palembang I)",
+      "description": "Serangan meriam besar-besaran dari kubu Palembang terhadap kapal perang Belanda yang dipimpin Muntinghe di Sungai Musi, dimenangkan telak oleh pasukan Sultan."
+    },
+    "character_card": {
+      "id": "chr-15",
+      "name": "Sultan Mahmud Badaruddin II",
+      "description": "Penguasa intelektual dan ahli strategi Palembang yang memimpin perlawanan bersenjata paling berani di Sumatra bagian selatan melawan kolonial Belanda."
+    }
+  },
+  {
+    "event_card": {
+      "id": "evt-16",
+      "question": "Kapan Perang Jawa yang menguras kas negara Belanda meletus akibat pematokan tanah makam leluhur?",
+      "displayDate": "20 Juli 1825",
+      "sortDate": 18250720,
+      "title": "Meletusnya Perang Diponegoro (Perang Jawa)",
+      "description": "Serangan pasukan Belanda ke Tegalrejo memicu perang gerilya berlandaskan semangat Islam terlama dan terbesar di Pulau Jawa pada abad ke-19."
+    },
+    "character_card": {
+      "id": "chr-16",
+      "name": "Pangeran Diponegoro",
+      "description": "Bangsawan religius dari Yogyakarta yang mengenakan sorban dan jubah, memimpin jihad suci melawan penindasan dan korupsi moral kolonial."
+    }
+  },
+  {
+    "event_card": {
+      "id": "evt-17",
+      "question": "Kapan benteng terakhir pertahanan Padri di Bonjol direbut dan pemimpin utamanya ditangkap?",
+      "displayDate": "28 Oktober 1837",
+      "sortDate": 18371028,
+      "title": "Penangkapan Tuanku Imam Bonjol",
+      "description": "Melalui taktik perundingan licik setelah peperangan bertahun-tahun, Belanda berhasil menangkap pemimpin laskar Padri, mengakhiri fase perlawanan terbesar di Minangkabau."
+    },
+    "character_card": {
+      "id": "chr-17",
+      "name": "Tuanku Imam Bonjol",
+      "description": "Ulama karismatik dan panglima perang Kaum Padri yang berjuang memurnikan ajaran Islam sekaligus memimpin perlawanan rakyat Minang terhadap Belanda."
+    }
+  },
+  {
+    "event_card": {
+      "id": "evt-18",
+      "question": "Kapan pemerintah Hindia Belanda secara resmi membacakan maklumat perang terhadap Kesultanan Aceh?",
+      "displayDate": "26 Maret 1873",
+      "sortDate": 18730326,
+      "title": "Deklarasi Perang Aceh",
+      "description": "Belanda menembakkan meriam dari kapal perang Citadel van Antwerpen ke daratan Kutaraja, memulai peperangan paling berdarah dan terpanjang (hampir 40 tahun) dalam sejarah kolonial Belanda."
+    },
+    "character_card": {
+      "id": "chr-18",
+      "name": "Sultan Alauddin Mahmud Syah II",
+      "description": "Sultan Aceh yang menolak keras ultimatum tunduk dari Belanda, memicu letusan semangat Perang Sabil di seluruh pelosok Nanggroe Aceh Darussalam."
+    }
+  }
+]

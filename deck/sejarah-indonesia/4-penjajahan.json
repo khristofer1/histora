@@ -1,0 +1,272 @@
+[
+  {
+    "event_card": {
+      "id": "evt-01",
+      "question": "Kapan benteng VOC Duurstede di Saparua berhasil direbut oleh pejuang Maluku?",
+      "displayDate": "16 Mei 1817",
+      "sortDate": 18170516,
+      "title": "Perebutan Benteng Duurstede",
+      "description": "Rakyat Maluku mengangkat senjata memprotes kembalinya kekuasaan Belanda dan praktik monopoli rempah. Mereka berhasil merebut benteng dan menewaskan Residen Van den Berg."
+    },
+    "character_card": {
+      "id": "chr-01",
+      "name": "Kapitan Pattimura (Thomas Matulessy)",
+      "description": "Pemimpin perlawanan rakyat Maluku yang gagah berani menyatukan berbagai kerajaan lokal untuk melawan penindasan kolonial Belanda."
+    }
+  },
+  {
+    "event_card": {
+      "id": "evt-02",
+      "question": "Kapan kebijakan Tanam Paksa (Cultuurstelsel) mulai diberlakukan di Hindia Belanda?",
+      "displayDate": "13 Agustus 1830",
+      "sortDate": 18300813,
+      "title": "Pemberlakuan Tanam Paksa",
+      "description": "Kebijakan eksploitatif yang mewajibkan petani menyisihkan 20% lahannya untuk ditanami komoditas ekspor guna menyelamatkan Belanda dari kebangkrutan ekonomi."
+    },
+    "character_card": {
+      "id": "chr-02",
+      "name": "Johannes van den Bosch",
+      "description": "Gubernur Jenderal Hindia Belanda yang merancang dan menerapkan sistem Cultuurstelsel yang sangat menyengsarakan rakyat pribumi."
+    }
+  },
+  {
+    "event_card": {
+      "id": "evt-03",
+      "question": "Kapan pertahanan terakhir laskar Buleleng dalam Perang Jagaraga dihancurkan oleh Belanda?",
+      "displayDate": "15 April 1849",
+      "sortDate": 18490415,
+      "title": "Puputan Jagaraga",
+      "description": "Pertempuran habis-habisan (puputan) rakyat Bali di Desa Jagaraga melawan ekspedisi militer besar-besaran Belanda akibat sengketa Hak Tawan Karang."
+    },
+    "character_card": {
+      "id": "chr-03",
+      "name": "I Gusti Ketut Jelantik",
+      "description": "Patih Kerajaan Buleleng sekaligus ahli strategi militer yang memimpin perlawanan sengit rakyat Bali pantang menyerah terhadap Belanda."
+    }
+  },
+  {
+    "event_card": {
+      "id": "evt-04",
+      "question": "Kapan Perang Banjar meletus yang ditandai dengan serangan ke tambang batu bara Belanda di Pengaron?",
+      "displayDate": "28 April 1859",
+      "sortDate": 18590428,
+      "title": "Meletusnya Perang Banjar",
+      "description": "Pemberontakan besar di Kalimantan Selatan yang dipicu oleh campur tangan Belanda dalam urusan suksesi takhta Kesultanan Banjar dan monopoli perdagangan."
+    },
+    "character_card": {
+      "id": "chr-04",
+      "name": "Pangeran Antasari",
+      "description": "Pemimpin tertinggi Perang Banjar yang menyatukan para panglima dan pemuka agama dengan semboyan 'Haram Manyarah Waja Sampai Kaputing'."
+    }
+  },
+  {
+    "event_card": {
+      "id": "evt-05",
+      "question": "Kapan Ratu Wilhelmina secara resmi mengumumkan kebijakan Politik Etis di Hindia Belanda?",
+      "displayDate": "17 September 1901",
+      "sortDate": 19010917,
+      "title": "Deklarasi Politik Etis",
+      "description": "Pidato takhta Ratu Belanda yang mencanangkan kebijakan 'Ethische Politiek' (Irigasi, Emigrasi, Edukasi) sebagai bentuk balas budi kepada rakyat koloni."
+    },
+    "character_card": {
+      "id": "chr-05",
+      "name": "Conrad Theodor van Deventer",
+      "description": "Tokoh intelektual Belanda yang menulis artikel 'Een Eereschuld' (Hutang Kehormatan), pelopor desakan diterapkannya Politik Etis."
+    }
+  },
+  {
+    "event_card": {
+      "id": "evt-06",
+      "question": "Kapan Sarekat Dagang Islam didirikan sebagai wadah ekonomi dan perlindungan pedagang lokal?",
+      "displayDate": "16 Oktober 1905",
+      "sortDate": 19051016,
+      "title": "Pendirian Sarekat Dagang Islam (SDI)",
+      "description": "Organisasi pergerakan pertama yang bertujuan melindungi pengusaha batik lokal di Solo dari dominasi pedagang asing dan kebijakan Belanda."
+    },
+    "character_card": {
+      "id": "chr-06",
+      "name": "K.H. Samanhudi",
+      "description": "Saudagar batik dari Surakarta yang mendirikan SDI, yang kelak berevolusi menjadi organisasi massa terbesar masa itu, Sarekat Islam."
+    }
+  },
+  {
+    "event_card": {
+      "id": "evt-07",
+      "question": "Kapan surat kabar Medan Prijaji, koran nasional pertama yang seluruh pekerjanya orang pribumi, terbit?",
+      "displayDate": "1 Januari 1907",
+      "sortDate": 19070101,
+      "title": "Penerbitan Medan Prijaji",
+      "description": "Koran ini menjadi alat propaganda nasionalisme, memberikan bantuan hukum bagi rakyat yang ditindas, dan mengawali era pers pergerakan."
+    },
+    "character_card": {
+      "id": "chr-07",
+      "name": "R.M. Tirto Adhi Soerjo",
+      "description": "Bapak Pers Nasional yang menggunakan jurnalisme sebagai senjata untuk melawan ketidakadilan dan menumbuhkan kesadaran berbangsa."
+    }
+  },
+  {
+    "event_card": {
+      "id": "evt-08",
+      "question": "Kapan Indische Partij didirikan sebagai partai politik pertama yang secara tegas menuntut kemerdekaan?",
+      "displayDate": "25 Desember 1912",
+      "sortDate": 19121225,
+      "title": "Pendirian Indische Partij",
+      "description": "Partai politik paling radikal pada masanya yang bercita-cita menyatukan semua golongan (Indiërs) untuk membangun tanah air merdeka lepas dari Belanda."
+    },
+    "character_card": {
+      "id": "chr-08",
+      "name": "Ernest Douwes Dekker (Danudirja Setiabudi)",
+      "description": "Tokoh Indo-Belanda revolusioner, salah satu dari 'Tiga Serangkai', yang menjadi motor penggerak utama lahirnya Indische Partij."
+    }
+  },
+  {
+    "event_card": {
+      "id": "evt-09",
+      "question": "Kapan Perguruan Nasional Tamansiswa didirikan untuk membebaskan pendidikan dari sistem kolonial?",
+      "displayDate": "3 Juli 1922",
+      "sortDate": 19220703,
+      "title": "Pendirian Tamansiswa",
+      "description": "Lembaga pendidikan yang menolak model sekolah Belanda, berlandaskan budaya nasional dan azas kemerdekaan untuk menumbuhkan jiwa kebangsaan pada anak-anak pribumi."
+    },
+    "character_card": {
+      "id": "chr-09",
+      "name": "Ki Hajar Dewantara",
+      "description": "Bapak Pendidikan Nasional yang meletakkan konsep 'Ing Ngarso Sung Tulodo, Ing Madya Mangun Karso, Tut Wuri Handayani'."
+    }
+  },
+  {
+    "event_card": {
+      "id": "evt-10",
+      "question": "Kapan Partai Nasional Indonesia (PNI) didirikan dengan asas Marhaenisme dan non-kooperasi?",
+      "displayDate": "4 Juli 1927",
+      "sortDate": 19270704,
+      "title": "Pendirian Partai Nasional Indonesia",
+      "description": "Partai politik berhaluan kiri radikal yang menyuarakan kemerdekaan penuh melalui aksi massa, memicu kekhawatiran besar pemerintah kolonial."
+    },
+    "character_card": {
+      "id": "chr-10",
+      "name": "Ir. Soekarno",
+      "description": "Tokoh utama PNI yang karismatik, yang karena aktivitas politiknya ditangkap dan diadili Belanda, melahirkan pledoi terkenal 'Indonesia Menggugat'."
+    }
+  },
+  {
+    "event_card": {
+      "id": "evt-11",
+      "question": "Kapan Sumpah Pemuda diikrarkan pada Kongres Pemuda II di Batavia?",
+      "displayDate": "28 Oktober 1928",
+      "sortDate": 19281028,
+      "title": "Deklarasi Sumpah Pemuda",
+      "description": "Momen puncak pemersatu pergerakan nasional di mana pemuda dari berbagai daerah berikrar bertanah air, berbangsa, dan berbahasa satu: Indonesia."
+    },
+    "character_card": {
+      "id": "chr-11",
+      "name": "Sugondo Djojopuspito",
+      "description": "Ketua Kongres Pemuda II yang berhasil memimpin jalannya rapat rumusan ikrar kebangsaan di Gedung Indonesische Clubgebouw."
+    }
+  },
+  {
+    "event_card": {
+      "id": "evt-12",
+      "question": "Kapan terjadinya pemberontakan pelaut pribumi di kapal perang HNLMS De Zeven Provinciën?",
+      "displayDate": "5 Februari 1933",
+      "sortDate": 19330205,
+      "title": "Dahagi Zeven Provinciën",
+      "description": "Aksi pembangkangan besar-besaran oleh awak kapal Indonesia dan sebagian awak Belanda di lepas pantai Sumatra untuk memprotes pemotongan gaji akibat depresi ekonomi."
+    },
+    "character_card": {
+      "id": "chr-12",
+      "name": "Martinus Paradja",
+      "description": "Salah satu pelaut bumiputera yang memimpin pengambilalihan kapal perang Zeven Provinciën, gugur ketika kapal dibom oleh pesawat Belanda."
+    }
+  },
+  {
+    "event_card": {
+      "id": "evt-13",
+      "question": "Kapan pemerintah Hindia Belanda menyerah tanpa syarat kepada Kekaisaran Jepang?",
+      "displayDate": "8 Maret 1942",
+      "sortDate": 19420308,
+      "title": "Perjanjian Kalijati",
+      "description": "Peristiwa penyerahan total wilayah Nusantara oleh Belanda kepada balatentara Jepang di Kalijati, Subang, menandai dimulainya masa pendudukan militer Jepang."
+    },
+    "character_card": {
+      "id": "chr-13",
+      "name": "Letjen Hein ter Poorten",
+      "description": "Panglima tentara Hindia Belanda (KNIL) yang menandatangani dokumen penyerahan wilayah kepada Jenderal Hitoshi Imamura."
+    }
+  },
+  {
+    "event_card": {
+      "id": "evt-14",
+      "question": "Kapan Tentara Pembela Tanah Air (PETA) resmi dibentuk oleh pemerintah militer Jepang?",
+      "displayDate": "3 Oktober 1943",
+      "sortDate": 19431003,
+      "title": "Pembentukan PETA",
+      "description": "Kesatuan militer bentukan Jepang yang melatih pemuda Indonesia ilmu militer modern. PETA kelak menjadi tulang punggung utama pembentukan angkatan bersenjata Indonesia (TNI)."
+    },
+    "character_card": {
+      "id": "chr-14",
+      "name": "Gatot Mangkupraja",
+      "description": "Tokoh pergerakan nasional yang menulis surat permohonan berdarah kepada Gunseikan agar diizinkan membentuk barisan pertahanan berisi pemuda lokal."
+    }
+  },
+  {
+    "event_card": {
+      "id": "evt-15",
+      "question": "Kapan meletusnya perlawanan santri Pesantren Sukamanah terhadap tentara Jepang di Singaparna?",
+      "displayDate": "25 Februari 1944",
+      "sortDate": 19440225,
+      "title": "Perlawanan Singaparna",
+      "description": "Bentrokan berdarah akibat penolakan ulama dan santri Tasikmalaya untuk melakukan 'Seikerei' (membungkuk ke arah Tokyo menghormati kaisar Jepang) karena musyrik."
+    },
+    "character_card": {
+      "id": "chr-15",
+      "name": "K.H. Zainal Mustafa",
+      "description": "Ulama pengasuh Pesantren Sukamanah yang memimpin perlawanan bersenjata menolak praktik Seikerei, yang akhirnya dihukum mati oleh Kenpeitai."
+    }
+  },
+  {
+    "event_card": {
+      "id": "evt-16",
+      "question": "Kapan tentara PETA di Blitar melancarkan pemberontakan besar bersenjata melawan perwira Jepang?",
+      "displayDate": "14 Februari 1945",
+      "sortDate": 19450214,
+      "title": "Pemberontakan PETA Blitar",
+      "description": "Aksi perlawanan bersenjata terencana pertama oleh tentara didikan Jepang yang tidak tega melihat penderitaan rakyat akibat kerja paksa (Romusha)."
+    },
+    "character_card": {
+      "id": "chr-16",
+      "name": "Shodanco Supriyadi",
+      "description": "Komandan peleton PETA yang mengobarkan semangat pemberontakan. Nasib dan keberadaannya hingga kini masih menjadi misteri sejarah."
+    }
+  },
+  {
+    "event_card": {
+      "id": "evt-17",
+      "question": "Kapan BPUPKI (Dokuritsu Junbi Cosakai) diumumkan untuk mempersiapkan dasar kemerdekaan?",
+      "displayDate": "1 Maret 1945",
+      "sortDate": 19450301,
+      "title": "Pembentukan BPUPKI",
+      "description": "Badan yang dibentuk oleh Jenderal Kumakichi Harada sebagai pemenuhan janji kemerdekaan, bertugas menyelidiki aspek politik, ekonomi, dan hukum bagi negara baru."
+    },
+    "character_card": {
+      "id": "chr-17",
+      "name": "Dr. K.R.T. Radjiman Wedyodiningrat",
+      "description": "Tokoh pergerakan senior yang ditunjuk sebagai ketua BPUPKI dan memandu sidang-sidang krusial perumusan dasar negara Pancasila dan UUD."
+    }
+  },
+  {
+    "event_card": {
+      "id": "evt-18",
+      "question": "Kapan golongan muda 'menculik' dwitunggal Soekarno-Hatta ke luar kota Jakarta menjelang proklamasi?",
+      "displayDate": "16 Agustus 1945",
+      "sortDate": 19450816,
+      "title": "Peristiwa Rengasdengklok",
+      "description": "Tindakan pengamanan paksa para pemimpin bangsa oleh pemuda radikal ke sebuah markas PETA di Karawang untuk menjauhkan mereka dari pengaruh dan tekanan Jepang."
+    },
+    "character_card": {
+      "id": "chr-18",
+      "name": "Sukarni Kartodiwirjo",
+      "description": "Salah satu pelopor golongan muda yang mendesak agar proklamasi kemerdekaan segera dibacakan tanpa menunggu restu dari pihak penjajah Jepang."
+    }
+  }
+]
