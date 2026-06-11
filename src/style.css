@@ -537,7 +537,15 @@ h1, h2, h3, h4 {
   margin-left: 0;
 }
 
-.hand-scroll .character-card:hover {
+@media (hover: hover) {
+  .hand-scroll .character-card:hover {
+    transform: translateY(-30px) scale(1.1) rotate(0deg) !important;
+    z-index: 100 !important;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.6);
+  }
+}
+
+.hand-scroll .character-card.mobile-hover {
   transform: translateY(-30px) scale(1.1) rotate(0deg) !important;
   z-index: 100 !important;
   box-shadow: 0 15px 35px rgba(0, 0, 0, 0.6);
