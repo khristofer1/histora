@@ -3,11 +3,11 @@ import { GameEngine } from './game/engine';
 import { GameUI } from './components/GameUI';
 import type { CardPair } from './game/types';
 
-import prasejarah from '../deck/sejarah-indonesia/1-prasejarah.json';
-import hinduBuddha from '../deck/sejarah-indonesia/2-hindu-buddha.json';
-import islam from '../deck/sejarah-indonesia/3-islam.json';
-import penjajahan from '../deck/sejarah-indonesia/4-penjajahan.json';
-import kemerdekaan from '../deck/sejarah-indonesia/5-kemerdekaan-reformasi.json';
+import prasejarah from './data/sejarah-indonesia/1-prasejarah.json';
+import hinduBuddha from './data/sejarah-indonesia/2-hindu-buddha.json';
+import islam from './data/sejarah-indonesia/3-islam.json';
+import penjajahan from './data/sejarah-indonesia/4-penjajahan.json';
+import kemerdekaan from './data/sejarah-indonesia/5-kemerdekaan-reformasi.json';
 
 const PREDEFINED_DECKS = [
   { id: '1-prasejarah', title: 'Prasejarah', desc: 'Zaman sebelum mengenal tulisan', data: prasejarah, icon: '🦕' },
