@@ -258,8 +258,7 @@ h1, h2, h3, h4 {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background: rgba(11, 15, 25, 0.6);
-  backdrop-filter: blur(8px);
+  background: #0b0f19;
   border-bottom: 1px solid var(--card-border);
   z-index: 10;
 }
@@ -294,6 +293,8 @@ h1, h2, h3, h4 {
   border: 1px solid var(--accent-blue);
   box-shadow: 0 4px 20px var(--accent-blue-glow);
   z-index: 15;
+  background: #111a2e !important;
+  backdrop-filter: none !important;
 }
 
 .question-icon {
