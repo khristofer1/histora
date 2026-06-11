@@ -317,7 +317,7 @@ h1, h2, h3, h4 {
 }
 
 .question-text {
-  font-size: 0.95rem;
+  font-size: 0.85rem;
   line-height: 1.4;
   font-weight: 500;
   color: var(--text-primary);
@@ -336,7 +336,7 @@ h1, h2, h3, h4 {
   flex: 1;
   display: flex;
   align-items: center;
-  padding: 10.5rem 2rem 6rem 2rem;
+  padding: 12rem 2rem 2rem 2rem;
   overflow-x: auto;
   scroll-behavior: smooth;
   gap: 0.5rem;
@@ -345,7 +345,7 @@ h1, h2, h3, h4 {
 
 .timeline-line {
   position: absolute;
-  top: 57%;
+  top: 67%;
   left: 0;
   right: 0;
   height: 4px;
@@ -578,7 +578,7 @@ h1, h2, h3, h4 {
   align-items: flex-end;
   position: relative;
   z-index: 10;
-  background: linear-gradient(to top, rgba(11, 15, 25, 0.9) 30%, transparent);
+  background: transparent;
 }
 
 .hand-scroll {
