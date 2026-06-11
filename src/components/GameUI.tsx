@@ -156,7 +156,51 @@ export const GameUI: React.FC<GameUIProps> = ({ engine, onQuit, onRestart }) => 
   return (
     <>
       <div className="top-bar">
-        <h2>Histora</h2>
+        <div style={{ display: 'flex', alignItems: 'center', gap: '0.8rem' }}>
+          <h2>Histora</h2>
+          <div style={{ display: 'flex', gap: '0.4rem', marginLeft: '0.4rem' }}>
+            <button 
+              onClick={() => {
+                if (window.confirm('Restart game? Progress saat ini akan hilang.')) {
+                  onRestart();
+                }
+              }} 
+              className="top-action-btn"
+              title="Restart Game"
+              style={{ background: 'rgba(255,255,255,0.05)', border: '1px solid var(--card-border)', borderRadius: '6px', color: 'var(--text-secondary)', cursor: 'pointer', fontSize: '0.9rem', padding: '0.3rem 0.5rem', display: 'flex', alignItems: 'center', transition: 'all 0.2s' }}
+              onMouseEnter={(e) => {
+                e.currentTarget.style.color = 'var(--accent-cyan)';
+                e.currentTarget.style.background = 'rgba(6, 182, 212, 0.1)';
+              }}
+              onMouseLeave={(e) => {
+                e.currentTarget.style.color = 'var(--text-secondary)';
+                e.currentTarget.style.background = 'rgba(255,255,255,0.05)';
+              }}
+            >
+              🔄
+            </button>
+            <button 
+              onClick={() => {
+                if (window.confirm('Kembali ke menu utama? Progress saat ini akan hilang.')) {
+                  onQuit();
+                }
+              }} 
+              className="top-action-btn"
+              title="Menu Utama"
+              style={{ background: 'rgba(255,255,255,0.05)', border: '1px solid var(--card-border)', borderRadius: '6px', color: 'var(--text-secondary)', cursor: 'pointer', fontSize: '0.9rem', padding: '0.3rem 0.5rem', display: 'flex', alignItems: 'center', transition: 'all 0.2s' }}
+              onMouseEnter={(e) => {
+                e.currentTarget.style.color = 'var(--wrong-color)';
+                e.currentTarget.style.background = 'rgba(239, 68, 68, 0.1)';
+              }}
+              onMouseLeave={(e) => {
+                e.currentTarget.style.color = 'var(--text-secondary)';
+                e.currentTarget.style.background = 'rgba(255,255,255,0.05)';
+              }}
+            >
+              🏠
+            </button>
+          </div>
+        </div>
         <div className="lives">{'❤️'.repeat(gameState.lives)}</div>
       </div>
 
