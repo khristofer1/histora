@@ -10,6 +10,7 @@ export default function App() {
   const [uploadStatus, setUploadStatus] = useState<{ text: string, type: 'default' | 'success' | 'error' }>({ text: 'Unggah Berkas Game (JSON)', type: 'default' });
   const [uploadFileName, setUploadFileName] = useState<string>('Seret file JSON ke sini atau klik untuk memilih');
   const [isDragOver, setIsDragOver] = useState(false);
+  const [gameCount, setGameCount] = useState<number>(0);
 
   const validateGameData = (data: any): boolean => {
     if (!Array.isArray(data) || data.length === 0) return false;
@@ -70,11 +71,12 @@ export default function App() {
     if (gameData) {
       const newEngine = new GameEngine(gameData, difficulty, () => {});
       setEngine(newEngine);
+      setGameCount(prev => prev + 1);
     }
   };
 
   if (engine) {
-    return <GameUI engine={engine} onQuit={() => setEngine(null)} />;
+    return <GameUI key={gameCount} engine={engine} onQuit={() => setEngine(null)} onRestart={startGame} />;
   }
 
   return (

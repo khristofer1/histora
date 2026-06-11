@@ -16,9 +16,10 @@ type PlayMode =
 interface GameUIProps {
   engine: GameEngine;
   onQuit: () => void;
+  onRestart: () => void;
 }
 
-export const GameUI: React.FC<GameUIProps> = ({ engine, onQuit }) => {
+export const GameUI: React.FC<GameUIProps> = ({ engine, onQuit, onRestart }) => {
   const [gameState, setGameState] = useState<GameState>(engine.getState());
   const [playMode, setPlayMode] = useState<PlayMode>('PLACE_EVENT');
   const [selectedCharId, setSelectedCharId] = useState<string | null>(null);
@@ -26,6 +27,7 @@ export const GameUI: React.FC<GameUIProps> = ({ engine, onQuit }) => {
   const [toast, setToast] = useState<{ message: string, type: 'success' | 'error' } | null>(null);
   const [feedbackData, setFeedbackData] = useState<{ isCorrect: boolean, placedCard: any } | null>(null);
   const [zoomedItem, setZoomedItem] = useState<{ id: string; type: 'event' | 'character' } | null>(null);
+  const [showGameOverModal, setShowGameOverModal] = useState(true);
 
   const handleToggleZoom = (id: string | null, type: 'event' | 'character' | null) => {
     if (!id || !type) {
@@ -60,6 +62,12 @@ export const GameUI: React.FC<GameUIProps> = ({ engine, onQuit }) => {
       setPlayMode('ACTION_CHOOSE');
     }
   }, [gameState.currentTurnEventCard, playMode]);
+
+  useEffect(() => {
+    if (!gameState.isGameOver) {
+      setShowGameOverModal(true);
+    }
+  }, [gameState.isGameOver]);
 
   const showToast = (message: string, type: 'success' | 'error') => {
     setToast({ message, type });
@@ -119,23 +127,20 @@ export const GameUI: React.FC<GameUIProps> = ({ engine, onQuit }) => {
     setPlayMode('PLACE_EVENT');
     setSelectedCharId(null);
     setRefreshList([]);
+    setFeedbackData(null);
+    setZoomedItem(null);
   };
 
-  if (gameState.isGameOver && playMode !== 'PLACEMENT_FEEDBACK') {
-    return (
-      <div style={{ display: 'flex', flexDirection: 'column', justifyContent: 'center', alignItems: 'center', height: '100%', textAlign: 'center', padding: '2rem' }} className="glass">
-        <h1 style={{ fontSize: '3.5rem', marginBottom: '1rem', color: gameState.isWin ? 'var(--correct-color)' : 'var(--wrong-color)' }}>
-          {gameState.isWin ? 'KAMU MENANG! 🏆' : 'GAME OVER 💀'}
-        </h1>
-        <p style={{ fontSize: '1.2rem', color: 'var(--text-secondary)', maxWidth: '400px', lineHeight: 1.5, marginBottom: '2rem' }}>
-          {gameState.isWin 
-            ? 'Luar biasa! Kamu berhasil menyusun kronologi waktu sejarah dan mencocokkan semua tokoh dengan tepat!' 
-            : 'Sayang sekali, nyawa sejarahmu habis karena terlalu banyak salah urutan peristiwa.'}
-        </p>
-        <button onClick={onQuit} className="start-btn" style={{ padding: '1rem 3rem' }}>Main Lagi</button>
-      </div>
-    );
-  }
+  const handleCancelAction = () => {
+    if (feedbackData && feedbackData.isCorrect) {
+      setPlayMode('PLACEMENT_FEEDBACK');
+      setZoomedItem({ id: feedbackData.placedCard.id, type: 'event' });
+      setSelectedCharId(null);
+      setRefreshList([]);
+    } else {
+      resetModes();
+    }
+  };
 
   const puttableCharIds = gameState.playerHand
     .filter(char => {
@@ -154,6 +159,38 @@ export const GameUI: React.FC<GameUIProps> = ({ engine, onQuit }) => {
         <h2>Histora</h2>
         <div className="lives">{'❤️'.repeat(gameState.lives)}</div>
       </div>
+
+      {gameState.isGameOver && playMode !== 'PLACEMENT_FEEDBACK' && showGameOverModal && (
+        <div className="dialog-overlay" style={{ zIndex: 1000 }}>
+          <div style={{ display: 'flex', flexDirection: 'column', justifyContent: 'center', alignItems: 'center', textAlign: 'center', padding: '2rem', maxWidth: '450px', width: '90%' }} className="dialog-box glass">
+            <h1 style={{ fontSize: '3.5rem', marginBottom: '1rem', color: gameState.isWin ? 'var(--correct-color)' : 'var(--wrong-color)' }}>
+              {gameState.isWin ? 'KAMU MENANG! 🏆' : 'GAME OVER 💀'}
+            </h1>
+            <p style={{ fontSize: '1.2rem', color: 'var(--text-secondary)', maxWidth: '400px', lineHeight: 1.5, marginBottom: '2rem' }}>
+              {gameState.isWin 
+                ? 'Luar biasa! Kamu berhasil menyusun kronologi waktu sejarah dan mencocokkan semua tokoh dengan tepat!' 
+                : 'Sayang sekali, nyawa sejarahmu habis karena terlalu banyak salah urutan peristiwa.'}
+            </p>
+            <div style={{ display: 'flex', flexDirection: 'column', gap: '0.8rem', width: '100%' }}>
+              <button onClick={onRestart} className="start-btn" style={{ padding: '0.8rem 2rem', width: '100%' }}>Main Lagi</button>
+              <button 
+                onClick={() => setShowGameOverModal(false)} 
+                className="dialog-btn secondary" 
+                style={{ padding: '0.8rem 2rem', width: '100%' }}
+              >
+                Lihat Linimasa
+              </button>
+              <button 
+                onClick={onQuit} 
+                className="dialog-btn secondary" 
+                style={{ padding: '0.8rem 2rem', width: '100%', background: 'rgba(255,255,255,0.02)' }}
+              >
+                Menu Utama
+              </button>
+            </div>
+          </div>
+        </div>
+      )}
       
       {playMode === 'PLACE_EVENT' && gameState.currentTurnEventCard && (
         <div className="question-banner glass">
@@ -184,14 +221,14 @@ export const GameUI: React.FC<GameUIProps> = ({ engine, onQuit }) => {
       {playMode === 'PUT_SELECT_CHAR' && (
         <div className="glass" style={{ position: 'absolute', top: '15%', left: '50%', transform: 'translateX(-50%)', zIndex: 20, padding: '0.8rem 1.5rem', borderRadius: '30px', border: '1px solid var(--accent-cyan)', display: 'flex', alignItems: 'center', gap: '1rem' }}>
           <span style={{ fontSize: '0.9rem', fontWeight: 600, color: 'var(--accent-cyan)' }}>👈 Pilih 1 tokoh dari tangan Anda</span>
-          <button onClick={resetModes} className="dialog-btn danger" style={{ padding: '0.4rem 0.8rem', fontSize: '0.8rem', borderRadius: '15px' }}>Batal</button>
+          <button onClick={handleCancelAction} className="dialog-btn danger" style={{ padding: '0.4rem 0.8rem', fontSize: '0.8rem', borderRadius: '15px' }}>Batal</button>
         </div>
       )}
 
       {playMode === 'PUT_SELECT_EVENT' && (
         <div className="glass" style={{ position: 'absolute', top: '15%', left: '50%', transform: 'translateX(-50%)', zIndex: 20, padding: '0.8rem 1.5rem', borderRadius: '30px', border: '1px solid var(--accent-cyan)', display: 'flex', alignItems: 'center', gap: '1rem' }}>
           <span style={{ fontSize: '0.9rem', fontWeight: 600, color: 'var(--accent-cyan)' }}>👇 Ketuk slot di bawah peristiwa yang cocok</span>
-          <button onClick={resetModes} className="dialog-btn danger" style={{ padding: '0.4rem 0.8rem', fontSize: '0.8rem', borderRadius: '15px' }}>Batal</button>
+          <button onClick={handleCancelAction} className="dialog-btn danger" style={{ padding: '0.4rem 0.8rem', fontSize: '0.8rem', borderRadius: '15px' }}>Batal</button>
         </div>
       )}
 
@@ -202,7 +239,7 @@ export const GameUI: React.FC<GameUIProps> = ({ engine, onQuit }) => {
             <button onClick={confirmRefresh} className="dialog-btn primary" style={{ padding: '0.5rem 1rem', fontSize: '0.85rem' }} disabled={refreshList.length === 0}>
               Tukar ({refreshList.length} Kartu)
             </button>
-            <button onClick={resetModes} className="dialog-btn secondary" style={{ padding: '0.5rem 1rem', fontSize: '0.85rem' }}>Batal</button>
+            <button onClick={handleCancelAction} className="dialog-btn secondary" style={{ padding: '0.5rem 1rem', fontSize: '0.85rem' }}>Batal</button>
           </div>
         </div>
       )}
@@ -221,50 +258,123 @@ export const GameUI: React.FC<GameUIProps> = ({ engine, onQuit }) => {
         onToggleZoom={handleToggleZoom}
       />
 
-      {playMode !== 'PLACEMENT_FEEDBACK' ? (
-        <Hand 
-          playerHand={gameState.playerHand}
-          playMode={playMode}
-          selectedCharId={selectedCharId}
-          refreshList={refreshList}
-          onSelectChar={(id) => {
-            setSelectedCharId(id);
-            setPlayMode('PUT_SELECT_EVENT');
-          }}
-          onToggleRefresh={(id) => {
-            if (refreshList.includes(id)) {
-              setRefreshList(refreshList.filter(rid => rid !== id));
-            } else {
-              setRefreshList([...refreshList, id]);
-            }
-          }}
-          puttableCharIds={puttableCharIds}
-        />
-      ) : (
-        feedbackData && (
+      {gameState.isGameOver && playMode !== 'PLACEMENT_FEEDBACK' ? (
+        !showGameOverModal && (
           <div className="hand-area" style={{ zIndex: 30 }}>
-            <div className="glass" style={{ padding: '1.2rem 2rem', borderRadius: '16px', display: 'flex', flexDirection: 'column', alignItems: 'center', gap: '0.8rem', maxWidth: '400px', width: '90%', margin: '0 auto 2.5rem auto', border: `1px solid ${feedbackData.isCorrect ? 'var(--correct-color)' : 'var(--wrong-color)'}` }}>
-              <h4 style={{ color: feedbackData.isCorrect ? 'var(--correct-color)' : 'var(--wrong-color)', fontSize: '1.1rem' }}>
-                {feedbackData.isCorrect ? 'Urutan Tepat!' : 'Urutan Kurang Tepat!'}
+            <div className="glass" style={{ padding: '1.2rem 2rem', borderRadius: '16px', display: 'flex', flexDirection: 'column', alignItems: 'center', gap: '0.8rem', maxWidth: '400px', width: '90%', margin: '0 auto 2.5rem auto', border: `1px solid ${gameState.isWin ? 'var(--correct-color)' : 'var(--wrong-color)'}` }}>
+              <h4 style={{ color: gameState.isWin ? 'var(--correct-color)' : 'var(--wrong-color)', fontSize: '1.1rem' }}>
+                {gameState.isWin ? 'KAMU MENANG! 🏆' : 'GAME OVER 💀'}
               </h4>
-              {!feedbackData.isCorrect && (
-                <p style={{ fontSize: '0.82rem', color: 'var(--text-secondary)', textAlign: 'center', margin: '0 0 0.4rem 0', lineHeight: 1.4 }}>
-                  Sistem telah mengoreksi posisinya pada linimasa. Nyawa berkurang 1 dan kamu mendapat kartu tokoh penalti.
-                </p>
-              )}
-              <button 
-                onClick={handleCloseFeedback} 
-                className="dialog-btn primary" 
-                style={{ padding: '0.6rem 2rem', fontSize: '0.9rem', background: feedbackData.isCorrect ? 'var(--correct-color)' : 'var(--wrong-color)', color: '#fff' }}
-              >
-                {feedbackData.isCorrect ? 'Pilih Aksi Giliran' : 'Lanjutkan'}
-              </button>
+              <div style={{ display: 'flex', gap: '0.8rem', width: '100%' }}>
+                <button 
+                  onClick={onRestart} 
+                  className="dialog-btn primary" 
+                  style={{ flex: 1, padding: '0.6rem 1rem', fontSize: '0.9rem', background: gameState.isWin ? 'var(--correct-color)' : 'var(--wrong-color)', color: '#fff' }}
+                >
+                  Main Lagi
+                </button>
+                <button 
+                  onClick={() => setShowGameOverModal(true)} 
+                  className="dialog-btn secondary" 
+                  style={{ flex: 1, padding: '0.6rem 1rem', fontSize: '0.9rem' }}
+                >
+                  Menu Utama
+                </button>
+              </div>
             </div>
           </div>
         )
+      ) : (
+        playMode !== 'PLACEMENT_FEEDBACK' ? (
+          <Hand 
+            playerHand={gameState.playerHand}
+            playMode={playMode}
+            selectedCharId={selectedCharId}
+            refreshList={refreshList}
+            onSelectChar={(id) => {
+              setSelectedCharId(id);
+              setPlayMode('PUT_SELECT_EVENT');
+            }}
+            onToggleRefresh={(id) => {
+              if (refreshList.includes(id)) {
+                setRefreshList(refreshList.filter(rid => rid !== id));
+              } else {
+                setRefreshList([...refreshList, id]);
+              }
+            }}
+            puttableCharIds={puttableCharIds}
+          />
+        ) : (
+          feedbackData && (
+            <div className="hand-area" style={{ zIndex: 30 }}>
+              <div className="glass" style={{ padding: '1.2rem 2rem', borderRadius: '16px', display: 'flex', flexDirection: 'column', alignItems: 'center', gap: '0.8rem', maxWidth: '400px', width: '90%', margin: '0 auto 2.5rem auto', border: `1px solid ${feedbackData.isCorrect ? 'var(--correct-color)' : 'var(--wrong-color)'}` }}>
+                <h4 style={{ color: feedbackData.isCorrect ? 'var(--correct-color)' : 'var(--wrong-color)', fontSize: '1.1rem' }}>
+                  {feedbackData.isCorrect ? 'Urutan Tepat!' : 'Urutan Kurang Tepat!'}
+                </h4>
+                {feedbackData.isCorrect ? (
+                  <>
+                    <p style={{ color: 'var(--text-secondary)', fontSize: '0.9rem', margin: '0 0 0.4rem 0' }}>
+                      Pilih langkah Anda selanjutnya:
+                    </p>
+                    <div className="dialog-buttons" style={{ width: '100%' }}>
+                      <button 
+                        onClick={() => {
+                          setPlayMode('PUT_SELECT_CHAR');
+                          setZoomedItem(null);
+                        }} 
+                        className="dialog-btn primary" 
+                        style={{ width: '100%' }}
+                        disabled={!canPutAnyCharacter}
+                      >
+                        Pasang Tokoh
+                      </button>
+                      <button 
+                        onClick={() => {
+                          setPlayMode('REFRESH_SELECT');
+                          setRefreshList([]);
+                          setZoomedItem(null);
+                        }} 
+                        className="dialog-btn secondary"
+                        style={{ width: '100%' }}
+                      >
+                        Tukar Tokoh
+                      </button>
+                      <button 
+                        onClick={() => {
+                          setPlayMode('PLACE_EVENT');
+                          engine.passTurn();
+                          setGameState(engine.getState());
+                          setFeedbackData(null);
+                          setZoomedItem(null);
+                        }} 
+                        className="dialog-btn secondary" 
+                        style={{ width: '100%', background: 'rgba(255,255,255,0.02)' }}
+                      >
+                        Lewati
+                      </button>
+                    </div>
+                  </>
+                ) : (
+                  <>
+                    <p style={{ fontSize: '0.82rem', color: 'var(--text-secondary)', textAlign: 'center', margin: '0 0 0.4rem 0', lineHeight: 1.4 }}>
+                      Sistem telah mengoreksi posisinya pada linimasa. Nyawa berkurang 1 dan kamu mendapat kartu tokoh penalti.
+                    </p>
+                    <button 
+                      onClick={handleCloseFeedback} 
+                      className="dialog-btn primary" 
+                      style={{ padding: '0.6rem 2rem', fontSize: '0.9rem', background: 'var(--wrong-color)', color: '#fff' }}
+                    >
+                      Lanjutkan
+                    </button>
+                  </>
+                )}
+              </div>
+            </div>
+          )
+        )
       )}
 
-      {playMode === 'ACTION_CHOOSE' && (
+      {!gameState.isGameOver && playMode === 'ACTION_CHOOSE' && (
         <ActionModal 
           onPut={() => setPlayMode('PUT_SELECT_CHAR')}
           onRefresh={() => {

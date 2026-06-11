@@ -653,7 +653,6 @@ h1, h2, h3, h4 {
 
 /* Status markers */
 .wrong-placement {
-  animation: shake 0.4s ease-in-out;
   border-color: var(--wrong-color) !important;
   box-shadow: 0 0 15px rgba(239, 68, 68, 0.2);
 }
