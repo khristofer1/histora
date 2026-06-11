@@ -889,15 +889,15 @@ h1, h2, h3, h4 {
 
 /* Feedback Box Dialogue styles */
 .feedback-box {
-  padding: 1rem 1.8rem;
+  padding: 1.1rem 1.8rem;
   border-radius: 16px;
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 0.75rem;
-  max-width: 360px;
+  gap: 0.8rem;
+  max-width: 380px;
   width: 90%;
-  margin: 0 auto 2.5rem auto;
+  margin: 0 auto 4.5rem auto;
   border: 1px solid transparent;
 }
 
@@ -912,18 +912,18 @@ h1, h2, h3, h4 {
 }
 
 .feedback-box h4 {
-  font-size: 1.05rem;
+  font-size: 1.1rem;
 }
 
 .feedback-desc {
   color: var(--text-secondary);
-  font-size: 0.88rem;
+  font-size: 0.9rem;
   margin: 0 0 0.3rem 0;
 }
 
 .feedback-desc-sub {
   color: var(--text-secondary);
-  font-size: 0.8rem;
+  font-size: 0.82rem;
   text-align: center;
   margin: 0 0 0.3rem 0;
   line-height: 1.4;
@@ -932,34 +932,34 @@ h1, h2, h3, h4 {
 /* Mobile Feedback Box Override */
 @media (max-width: 768px) {
   .feedback-box {
-    max-width: 290px;
-    padding: 0.75rem 1rem;
-    gap: 0.4rem;
-    margin-bottom: 0.8rem;
+    max-width: 310px;
+    padding: 0.8rem 1.2rem;
+    gap: 0.5rem;
+    margin-bottom: 2.2rem;
   }
 
   .feedback-box h4 {
-    font-size: 0.9rem;
+    font-size: 0.98rem;
   }
 
   .feedback-desc {
-    font-size: 0.78rem;
-    margin-bottom: 0.2rem;
+    font-size: 0.82rem;
+    margin-bottom: 0.25rem;
   }
 
   .feedback-desc-sub {
-    font-size: 0.75rem;
-    margin-bottom: 0.2rem;
-    line-height: 1.3;
+    font-size: 0.78rem;
+    margin-bottom: 0.25rem;
+    line-height: 1.35;
   }
 
   .feedback-box .dialog-buttons {
-    gap: 0.4rem;
+    gap: 0.45rem;
   }
 
   .feedback-box .dialog-btn {
-    padding: 0.5rem;
-    font-size: 0.8rem;
+    padding: 0.6rem;
+    font-size: 0.85rem;
   }
 }
 
