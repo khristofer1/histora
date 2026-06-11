@@ -337,7 +337,7 @@ h1, h2, h3, h4 {
   flex: 1;
   display: flex;
   align-items: flex-start;
-  padding: 10rem 2rem 2rem 2rem;
+  padding: 7rem 2rem 2rem 2rem;
   overflow-x: auto;
   overflow-y: hidden;
   scroll-behavior: smooth;
@@ -401,14 +401,16 @@ h1, h2, h3, h4 {
   font-size: 0.9rem;
   font-weight: 700;
   margin-bottom: 0.6rem;
+  text-align: center;
 }
 
 .event-card .title {
   font-family: var(--font-heading);
   font-weight: 600;
-  font-size: 0.95rem;
+  font-size: 0.9rem;
   line-height: 1.3;
   margin-bottom: 0.5rem;
+  text-align: center;
 }
 
 .event-card .desc {
@@ -429,16 +431,17 @@ h1, h2, h3, h4 {
 
 .character-card.in-hand {
   cursor: pointer;
-  height: 220px;
+  height: 200px;
   padding: 0.8rem;
 }
 
 .character-card.in-hand .name {
-  font-size: 0.95rem;
+  font-size: 0.85rem;
+  text-align: center;
 }
 
 .character-card.in-hand .desc {
-  font-size: 0.8rem;
+  font-size: 0.75rem;
 }
 
 .character-card .related {
@@ -456,6 +459,7 @@ h1, h2, h3, h4 {
   font-size: 1.05rem;
   color: var(--text-primary);
   margin-bottom: 0.5rem;
+  text-align: center;
 }
 
 .character-card .desc {
@@ -542,7 +546,7 @@ h1, h2, h3, h4 {
 }
 
 .placed-char-container .character-card .name {
-  font-size: 0.95rem;
+  font-size: 0.85rem;
 }
 
 .placed-char-container .character-card .desc {
