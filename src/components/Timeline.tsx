@@ -190,7 +190,6 @@ function TimelineCardElement({
                 onToggleZoom(tCard.event.id, 'character');
               }}
             >
-              <div className="related" style={{ color: 'var(--correct-color)' }}>Terpasang</div>
               <div className="name">{placedChar.name}</div>
               <div className="desc">{placedChar.description}</div>
             </div>

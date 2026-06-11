@@ -86,7 +86,6 @@ export default function Hand({
                 if (playMode === 'REFRESH_SELECT') onToggleRefresh(char.id);
               }}
             >
-              <div className="related">Tokoh Histora</div>
               <div className="name">{char.name}</div>
               <div className="desc">{char.description}</div>
             </div>

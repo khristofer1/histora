@@ -337,7 +337,7 @@ h1, h2, h3, h4 {
   flex: 1;
   display: flex;
   align-items: flex-start;
-  padding: 7rem 2rem 2rem 2rem;
+  padding: 8rem 2rem 2rem 2rem;
   overflow-x: auto;
   overflow-y: hidden;
   scroll-behavior: smooth;
@@ -348,7 +348,7 @@ h1, h2, h3, h4 {
 
 .timeline-line {
   position: absolute;
-  top: calc(10rem + 135px);
+  top: calc(8rem + 125px);
   left: 0;
   right: 0;
   height: 4px;
@@ -360,7 +360,7 @@ h1, h2, h3, h4 {
 /* Cards */
 .card {
   width: 185px;
-  height: 270px;
+  height: 250px;
   border-radius: 14px;
   position: relative;
   transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
@@ -374,7 +374,7 @@ h1, h2, h3, h4 {
 }
 
 .event-card {
-  padding: 1.2rem;
+  padding: 1rem;
   border: 1px solid var(--card-border);
 }
 
@@ -442,15 +442,6 @@ h1, h2, h3, h4 {
 
 .character-card.in-hand .desc {
   font-size: 0.75rem;
-}
-
-.character-card .related {
-  font-size: 0.7rem;
-  text-transform: uppercase;
-  letter-spacing: 1px;
-  color: var(--accent-blue);
-  font-weight: 700;
-  margin-bottom: 0.5rem;
 }
 
 .character-card .name {
@@ -633,7 +624,7 @@ h1, h2, h3, h4 {
 /* Drop Zone & Tap Zones */
 .drop-zone {
   width: 45px;
-  height: 270px;
+  height: 250px;
   border-radius: 14px;
   border: 2px dashed transparent;
   display: flex;
