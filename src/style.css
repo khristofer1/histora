@@ -497,7 +497,7 @@ h1, h2, h3, h4 {
 }
 
 .event-card.zoomed {
-  transform: scale(1.12) translateY(-15px) !important;
+  transform: scale(1.12) !important;
   z-index: 50 !important;
   box-shadow: 0 25px 50px rgba(0, 0, 0, 0.7), 0 0 20px var(--accent-cyan-glow);
   border-color: var(--accent-cyan) !important;
