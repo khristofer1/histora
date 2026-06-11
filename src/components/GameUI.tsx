@@ -161,7 +161,7 @@ export const GameUI: React.FC<GameUIProps> = ({ engine, onQuit, onRestart }) => 
           <div style={{ display: 'flex', gap: '0.4rem', marginLeft: '0.4rem' }}>
             <button 
               onClick={() => {
-                if (window.confirm('Restart game? Progress saat ini akan hilang.')) {
+                if (window.confirm('Ulangi permainan? Progress saat ini akan hilang.')) {
                   onRestart();
                 }
               }} 
