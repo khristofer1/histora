@@ -274,7 +274,7 @@ export const GameUI: React.FC<GameUIProps> = ({ engine, onQuit, onRestart }) => 
                   Main Lagi
                 </button>
                 <button 
-                  onClick={() => setShowGameOverModal(true)} 
+                  onClick={onQuit} 
                   className="dialog-btn secondary" 
                   style={{ flex: 1, padding: '0.6rem 1rem', fontSize: '0.9rem' }}
                 >
