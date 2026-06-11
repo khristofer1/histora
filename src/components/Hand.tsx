@@ -29,6 +29,25 @@ export default function Hand({
       setIsTouch(window.matchMedia('(pointer: coarse)').matches);
     }
   }, []);
+
+  useEffect(() => {
+    if (!isTouch || !activeHoverId) return;
+
+    const handleOutsideClick = (e: TouchEvent | MouseEvent) => {
+      const target = e.target as HTMLElement;
+      if (target && !target.closest('.character-card')) {
+        setActiveHoverId(null);
+      }
+    };
+
+    document.addEventListener('touchstart', handleOutsideClick, { passive: true });
+    document.addEventListener('mousedown', handleOutsideClick);
+
+    return () => {
+      document.removeEventListener('touchstart', handleOutsideClick);
+      document.removeEventListener('mousedown', handleOutsideClick);
+    };
+  }, [isTouch, activeHoverId]);
   
   return (
     <div className="hand-area" id="hand-area">
