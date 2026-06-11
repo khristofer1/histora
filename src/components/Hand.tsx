@@ -37,7 +37,7 @@ export default function Hand({
           if (isPuttable) classNames += ' puttable-hint';
 
           const rotation = (idx - (playerHand.length - 1) / 2) * 4;
-          const transformStyle = `rotate(${rotation}deg) translateY(${Math.abs(rotation) * 1.5}px)`;
+          const transformStyle = `rotate(${rotation}deg) translateY(${Math.abs(rotation) * 1.5}px) translateZ(0)`;
 
           return (
             <div 

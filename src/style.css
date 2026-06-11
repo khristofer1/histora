@@ -680,6 +680,7 @@ h1, h2, h3, h4 {
 .selectable {
   cursor: pointer;
   animation: pulse-glow 1.5s infinite alternate;
+  will-change: box-shadow, border-color;
 }
 
 .selected-char-pulse {
@@ -692,6 +693,7 @@ h1, h2, h3, h4 {
 .puttable-hint {
   animation: puttable-glow 1.5s infinite alternate;
   border: 1.5px solid var(--accent-cyan) !important;
+  will-change: box-shadow;
 }
 
 @keyframes puttable-glow {
