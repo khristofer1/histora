@@ -337,7 +337,7 @@ h1, h2, h3, h4 {
   flex: 1;
   display: flex;
   align-items: center;
-  padding: 12rem 2rem 2rem 2rem;
+  padding: 16rem 2rem 2rem 2rem;
   overflow-x: auto;
   overflow-y: hidden;
   scroll-behavior: smooth;
@@ -348,7 +348,7 @@ h1, h2, h3, h4 {
 
 .timeline-line {
   position: absolute;
-  top: 67%;
+  top: 73%;
   left: 0;
   right: 0;
   height: 4px;
@@ -574,14 +574,22 @@ h1, h2, h3, h4 {
 
 /* Hand Area */
 .hand-area {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
   height: 325px;
   padding: 0 2rem;
   display: flex;
   justify-content: center;
   align-items: flex-end;
-  position: relative;
   z-index: 10;
   background: transparent;
+  pointer-events: none;
+}
+
+.hand-area .glass {
+  pointer-events: auto;
 }
 
 .hand-scroll {
@@ -594,11 +602,13 @@ h1, h2, h3, h4 {
   padding: 4rem 3rem 3rem;
   scroll-behavior: smooth;
   align-items: flex-end;
+  pointer-events: none;
 }
 
 .hand-scroll .character-card {
   margin-left: -25px;
   transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  pointer-events: auto;
 }
 
 .hand-scroll .character-card:first-child {
