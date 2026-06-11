@@ -431,7 +431,7 @@ h1, h2, h3, h4 {
 
 .character-card.in-hand {
   cursor: pointer;
-  height: 200px;
+  height: 195px;
   padding: 0.8rem;
 }
 
@@ -481,10 +481,8 @@ h1, h2, h3, h4 {
 
 .placed-char-container {
   position: absolute;
-  top: 100px; /* Leaves the top part (Date + Title) of the event card visible */
-  left: 6px;
-  right: 6px;
-  height: 195px; /* Size of character card inside */
+  top: 110px; /* Leaves the top part (Date + Title) of the event card visible */
+  height: 190px; /* Size of character card inside */
   z-index: 5;
   transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
 }
@@ -935,7 +933,7 @@ h1, h2, h3, h4 {
     max-width: 310px;
     padding: 0.8rem 1.2rem;
     gap: 0.5rem;
-    margin-bottom: 2.2rem;
+    margin-bottom: 4rem;
   }
 
   .feedback-box h4 {
