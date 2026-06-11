@@ -306,13 +306,13 @@ export const GameUI: React.FC<GameUIProps> = ({ engine, onQuit, onRestart }) => 
         ) : (
           feedbackData && (
             <div className="hand-area" style={{ zIndex: 30 }}>
-              <div className="glass" style={{ padding: '1.2rem 2rem', borderRadius: '16px', display: 'flex', flexDirection: 'column', alignItems: 'center', gap: '0.8rem', maxWidth: '400px', width: '90%', margin: '0 auto 2.5rem auto', border: `1px solid ${feedbackData.isCorrect ? 'var(--correct-color)' : 'var(--wrong-color)'}` }}>
-                <h4 style={{ color: feedbackData.isCorrect ? 'var(--correct-color)' : 'var(--wrong-color)', fontSize: '1.1rem' }}>
+              <div className={`glass feedback-box ${feedbackData.isCorrect ? 'correct' : 'wrong'}`}>
+                <h4 style={{ color: feedbackData.isCorrect ? 'var(--correct-color)' : 'var(--wrong-color)' }}>
                   {feedbackData.isCorrect ? 'Urutan Tepat!' : 'Urutan Kurang Tepat!'}
                 </h4>
                 {feedbackData.isCorrect ? (
                   <>
-                    <p style={{ color: 'var(--text-secondary)', fontSize: '0.9rem', margin: '0 0 0.4rem 0' }}>
+                    <p className="feedback-desc">
                       Pilih langkah Anda selanjutnya:
                     </p>
                     <div className="dialog-buttons" style={{ width: '100%' }}>
@@ -355,7 +355,7 @@ export const GameUI: React.FC<GameUIProps> = ({ engine, onQuit, onRestart }) => 
                   </>
                 ) : (
                   <>
-                    <p style={{ fontSize: '0.82rem', color: 'var(--text-secondary)', textAlign: 'center', margin: '0 0 0.4rem 0', lineHeight: 1.4 }}>
+                    <p className="feedback-desc-sub">
                       Sistem telah mengoreksi posisinya pada linimasa. Nyawa berkurang 1 dan kamu mendapat kartu tokoh penalti.
                     </p>
                     <button 
