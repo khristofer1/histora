@@ -98,6 +98,27 @@ export default function App() {
       <p className="home-subtitle">Game Urutan Waktu & Sejarah Interaktif</p>
       
       <div className="setup-panel glass">
+        <div className="difficulty-container">
+          <div className="difficulty-label">Jumlah Kartu Tokoh Awal (Tingkat Kesulitan):</div>
+          <div className="difficulty-options">
+            {[5, 6, 7, 8].map(diff => (
+              <button 
+                key={diff}
+                className={`difficulty-btn ${difficulty === diff ? 'active' : ''}`}
+                onClick={() => setDifficulty(diff)}
+              >
+                {diff}
+              </button>
+            ))}
+          </div>
+        </div>
+        
+        <button className="start-btn" disabled={!gameData} onClick={startGame}>
+          Mulai Bermain
+        </button>
+
+        <div style={{ borderTop: '1px solid var(--card-border)', margin: '0.4rem 0' }}></div>
+
         <h3 style={{ marginBottom: '0.2rem', color: 'var(--accent-cyan)' }}>Pilih Era Sejarah</h3>
         
         <div className="era-grid">
@@ -138,25 +159,6 @@ export default function App() {
           </p>
           <input type="file" className="file-input" accept=".json" onChange={handleFileUpload} />
         </div>
-        
-        <div className="difficulty-container">
-          <div className="difficulty-label">Jumlah Kartu Tokoh Awal (Tingkat Kesulitan):</div>
-          <div className="difficulty-options">
-            {[5, 6, 7, 8].map(diff => (
-              <button 
-                key={diff}
-                className={`difficulty-btn ${difficulty === diff ? 'active' : ''}`}
-                onClick={() => setDifficulty(diff)}
-              >
-                {diff}
-              </button>
-            ))}
-          </div>
-        </div>
-        
-        <button className="start-btn" disabled={!gameData} onClick={startGame}>
-          Mulai Bermain
-        </button>
       </div>
     </div>
   );
